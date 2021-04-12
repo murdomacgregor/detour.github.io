@@ -39,7 +39,7 @@
 <br>
 
 	<!-- This sources the initial car image with both headlights and radio off for use in the following two button functions -->	
-	<img id ="parkedCar" src="./Images/A1/A1 parked RadioOffHeadlightOff.png" alt="car.png" style="width:1280px;height:720px;" usemap="#carcontrols" class="center">
+	<img id ="parkedCar" src="../Images/A1/A1 parked RadioOffHeadlightOff.png" alt="car.png" style="width:1280px;height:720px;" usemap="#carcontrols" class="center">
 
 <!-- This creates the image maps used for both the car radio and car headlight buttons -->	
 <map name="carcontrols">
@@ -52,24 +52,24 @@
             var image =  document.getElementById("parkedCar");
             function pressRadioButton1()
             {
-                if (image.getAttribute('src') == "./Images/A1/A1 parked RadioOffHeadlightOff.png")
+                if (image.getAttribute('src') == "../Images/A1/A1 parked RadioOffHeadlightOff.png")
                 {
-                    image.src = "./Images/A1/A1 parked RadioOnHeadlightOff.png";
+                    image.src = "../Images/A1/A1 parked RadioOnHeadlightOff.png";
                 }
 				
-				else if (image.getAttribute('src') == "./Images/A1/A1 parked RadioOffHeadlightOn.png")
+				else if (image.getAttribute('src') == "../Images/A1/A1 parked RadioOffHeadlightOn.png")
 				{
-					image.src = "./Images/A1/A1 parked RadioOnHeadlightOn.png";
+					image.src = "../Images/A1/A1 parked RadioOnHeadlightOn.png";
 				}
 
-				else if (image.getAttribute('src') == "./Images/A1/A1 parked RadioOnHeadlightOn.png")
+				else if (image.getAttribute('src') == "../Images/A1/A1 parked RadioOnHeadlightOn.png")
 				{
-					image.src = "./Images/A1/A1 parked RadioOffHeadlightOn.png";
+					image.src = "../Images/A1/A1 parked RadioOffHeadlightOn.png";
 				}
 				
                 else
                 {
-                    image.src = "./Images/A1/A1 parked RadioOffHeadlightOff.png";
+                    image.src = "../Images/A1/A1 parked RadioOffHeadlightOff.png";
                 }
             }
         </script>	
@@ -79,24 +79,24 @@
             var image =  document.getElementById("parkedCar");
             function pressHeadlightButton1()
             {
-                if (image.getAttribute('src') == "./Images/A1/A1 parked RadioOffHeadlightOff.png")
+                if (image.getAttribute('src') == "../Images/A1/A1 parked RadioOffHeadlightOff.png")
                 {
-                    image.src = "./Images/A1/A1 parked RadioOffHeadlightOn.png";
+                    image.src = "../Images/A1/A1 parked RadioOffHeadlightOn.png";
                 }
 				
-				else if (image.getAttribute('src') == "./Images/A1/A1 parked RadioOnHeadlightOff.png")
+				else if (image.getAttribute('src') == "../Images/A1/A1 parked RadioOnHeadlightOff.png")
 				{
-					image.src = "./Images/A1/A1 parked RadioOnHeadlightOn.png";
+					image.src = "../Images/A1/A1 parked RadioOnHeadlightOn.png";
 				}
 				
-				else if (image.getAttribute('src') == "./Images/A1/A1 parked RadioOnHeadlightOn.png")
+				else if (image.getAttribute('src') == "../Images/A1/A1 parked RadioOnHeadlightOn.png")
 				{
-					image.src = "./Images/A1/A1 parked RadioOnHeadlightOff.png";
+					image.src = "../Images/A1/A1 parked RadioOnHeadlightOff.png";
 				}
 				
                 else
                 {
-                    image.src = "./Images/A1/A1 parked RadioOffHeadlightOff.png";
+                    image.src = "../Images/A1/A1 parked RadioOffHeadlightOff.png";
                 }
             }
         </script>
