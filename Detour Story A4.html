@@ -14,7 +14,7 @@
 <script type="text/javascript" src="Scripts/previousPage.js"></script>
 
 <!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
-<script type="text/javascript" src="scripts/toggleAudio.js"></script>
+<script type="text/javascript" src="Scripts/toggleAudio.js"></script>
 
 </head>
 
@@ -39,7 +39,7 @@
 <br>
 
 <!-- This sources the initial door closed image and door open image (this is hidden, only used to create imagemap) for use in the door open/close functions -->	
-	<img id ="doorShut" src="images/A4/A4 Door Open.png" alt="doorOpenedNoNote.png" style="width:1280px;height:720px;" usemap="#openAndCloseDoor" class="center">
+	<img id ="doorShut" src="Images/A4/A4 Door Open.png" alt="doorOpenedNoNote.png" style="width:1280px;height:720px;" usemap="#openAndCloseDoor" class="center">
 	
 <!-- This creates the image maps used for both the the open and closed outhouse door -->	
 <map name="openAndCloseDoor">
@@ -52,14 +52,14 @@
             var image =  document.getElementById("doorShut");
             function doorOpen()
             {
-                if (image.getAttribute('src') == "images/A4/A4 Door Open.png")
+                if (image.getAttribute('src') == "Images/A4/A4 Door Open.png")
                 {
-                   image.src = "images/A4/A4 Door Shut.png";
+                   image.src = "Images/A4/A4 Door Shut.png";
                 }
 				
                 else
                 {
-                    image.src = "images/A4/A4 Door Open.png";
+                    image.src = "Images/A4/A4 Door Open.png";
                 }
             }
         </script>
@@ -69,14 +69,14 @@
             var image =  document.getElementById("doorShut");
             function doorClose()
             {
-                if (image.getAttribute('src') == "images/A4/A4 Door Shut.png")
+                if (image.getAttribute('src') == "Images/A4/A4 Door Shut.png")
                 {
-                   image.src = "images/A4/A4 Door Open.png";
+                   image.src = "Images/A4/A4 Door Open.png";
                 }
 				
                 else
                 {
-                    image.src = "images/A4/A4 Door Shut.png";
+                    image.src = "Images/A4/A4 Door Shut.png";
                 }
             }
         </script>
@@ -87,13 +87,13 @@
 
 		
 <!-- This function reveals text after the car radio is pressed -->
-<script type="text/javascript" src="scripts/showExtraText.js"></script>
+<script type="text/javascript" src="Scripts/showExtraText.js"></script>
 
 		<br>
 
 <!-- This calls in the decisions script to use the functions when the player makes a decision/action -->		
 	<p id="inspectBlood"></p>
 	<p id="goBackToCar"></p>
-		<script type="text/javascript" src="scripts/showDecisions.js"></script>
+		<script type="text/javascript" src="Scripts/showDecisions.js"></script>
 </body>
 </html>
