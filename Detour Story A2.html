@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+			<script>
+				var loadbackground = function () {
+					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
+				}
+
+				window.onload = loadbackground();
+			</script>
+
+<!-- This calls in the previousPage script for use in the navigation bar -->	
+<script type="text/javascript" src="Scripts/previousPage.js"></script>
+
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="scripts/toggleAudio.js"></script>
+
+</head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<body>
+
+	<!-- This builds the navigation bar including the links/functions for each button -->		
+	<div class="navigation">
+		<li><a class="active" href="index.html">Main Menu</a></li>
+		<li><a class="active" href="Detour Options.html">Options</a></li>
+	<li><a class="active" onclick="previousPage()">Previous Page</a></li>
+	<li><a class="active" href="Detour Homepage.html">Inventory</a></li>
+	<li><a class="active" onclick="savedGame()">Save Game</a></li>
+		<div class="navigation_right">
+			<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+		</div>
+	</div>
+
+<br>
+
+<!-- This sources the initial door closed image and door open image (this is hidden, only used to create imagemap) for use in the door open/close functions -->	
+	<img id ="doorShut" src="images/A2/A2 Door Shut.png" alt="doorClosed.png" style="width:1280px;height:720px;" usemap="#openAndCloseDoor" class="center">
+	
+<!-- This creates the image maps used for both the the open and closed outhouse door -->	
+<map name="openAndCloseDoor">
+	<area shape="poly" coords="759, 293, 771, 293, 776, 369, 763, 369" title="outhouseDoorClosed" onclick="doorOpen(); doorOpenSound(); showExtraText3();"/>
+	<area shape="poly" coords="233, 396, 244, 393, 261, 465, 249, 469" title="outhouseDoorOpened" onclick="doorClose(); doorCloseSound();"/>
+	<area shape="poly" coords="568, 317, 607, 328, 568, 377, 554, 360" title="outhouseNoteOnWall" onclick="grabOuthouseNote(); readOuthouseNote(); showExtraText4(); showDecisionA3(); showDecisionA4();"/>
+</map>
+
+<!-- This function opens the outhouse door -->	
+        <script>
+            var image =  document.getElementById("doorShut");
+            function doorOpen()
+            {
+                if (image.getAttribute('src') == "images/A2/A2 Door Shut.png")
+                {
+                   image.src = "images/A2/A2 Door Open.png";
+                }
+				
+                else
+                {
+                    image.src = "images/A2/A2 Door Shut.png";
+                }
+            }
+        </script>
+		
+<!-- This function closes the outhouse door -->	
+        <script>
+            var image =  document.getElementById("doorShut");
+            function doorClose()
+            {
+                if (image.getAttribute('src') == "images/A2/A2 Door Open.png")
+                {
+                   image.src = "images/A2/A2 Door Shut.png";
+                }
+				
+                else
+                {
+                    image.src = "images/A2/A2 Door Open.png";
+                }
+            }
+        </script>
+		
+<!-- This function reads the note on the wall -->	
+        <script>
+            var image =  document.getElementById("doorShut");
+            function readOuthouseNote()
+            {
+                if (image.getAttribute('src') == "images/A2/A2 Door Open.png")
+                {
+                   image.src = "images/A2/A2 Outhouse Note.png";
+                }
+				
+                else
+                {
+                    image.src = "images/A2/A2 Door Open.png";
+                }
+            }
+        </script>
+		
+		<br>
+		
+		<p id="p1"> You get out of the car and approach the mysterious structure.  </p>	
+
+		
+<!-- This function reveals text after the car radio is pressed -->
+<script type="text/javascript" src="scripts/showExtraText.js"></script>
+
+		<br>
+
+<!-- This calls in the decisions script to use the functions when the player makes a decision/action -->		
+	<p id="keepNote"></p>
+	<p id="dropNote"></p>
+		<script type="text/javascript" src="scripts/showDecisions.js"></script>
+</body>
+</html>

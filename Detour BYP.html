@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+			<script>
+				var loadbackground = function () {
+					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
+				}
+
+				window.onload = loadbackground();
+			</script>
+			
+<!-- This calls in the previousPage script for use in the navigation bar -->	
+<script type="text/javascript" src="Scripts/previousPage.js"></script>
+
+<!-- This function saves the game -->		
+<script type="text/javascript" src="Scripts/saveGame.js"></script>
+			
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+
+	
+<div class="navigation">
+  <li><a class="active" href="index.html">Main Menu</a></li>
+  <li><a class="active" href="Detour Options.html">Options</a></li>
+  <li><a class="active" onclick="previousPage()">Previous Page</a></li>
+  <li><a class="active" href="Detour Homepage.html">Inventory</a></li>
+  <li><a class="active" onclick="testButton1()">Save Game</a></li>
+	<div class="navigation_right">
+		<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+	</div>
+</div>
+
+<br>
+
+<h1>
+
+Before you play
+
+</h1>
+
+<h2> 
+Detour is an interactive choose-your-own-adventure game. However, this adventure will not be straightforward. Throughout your playthrough, try clicking on things that intrigue you. You never know what may reveal itself when you think outside the box. Enjoy...
+</h2>
+
+	
+		<h1><a href="Detour Prologue.html">Continue</a></h1>
+
+
+
+</body>
+</html>

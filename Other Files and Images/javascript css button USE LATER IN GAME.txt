@@ -1,0 +1,26 @@
+button for changing image (use this later)
+
+<script>
+function changinglight(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "Images/Detour Main Page Banner.png"
+  } else {
+    pic = "Images/Detour Homepage Yellow.png"
+  }
+  document.getElementById('myImage').src = pic;
+}
+</script>
+
+<img id="myImage" src="Images/Detour Main Page Banner.png" width="1920" height="1080" class="center">
+
+<p> Nobody's here yet... Story begins here! </p>
+<p>
+<button type="button" onclick="light(1)">Light On</button>
+<button type="button" onclick="light(0)">Light Off</button>
+</p>
+
+
+
+</body>
+</html>

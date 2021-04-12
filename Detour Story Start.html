@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+			<script>
+				var loadbackground = function () {
+					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
+				}
+
+				window.onload = loadbackground();
+			</script>
+
+<!-- This calls in the previousPage script for use in the navigation bar -->	
+<script type="text/javascript" src="Scripts/previousPage.js"></script>
+
+<!-- This function toggles the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="scripts/toggleAudio.js"></script>
+
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+
+<!-- This builds the navigation bar including the links/functions for each button -->		
+<div class="navigation">
+  <li><a class="active" href="index.html">Main Menu</a></li>
+  <li><a class="active" href="Detour Options.html">Options</a></li>
+  <li><a class="active" onclick="previousPage()">Previous Page</a></li>
+  <li><a class="active" href="Detour Homepage.html">Inventory</a></li>
+  <li><a class="active" onclick="savedGame()">Save Game</a></li>
+	<div class="navigation_right">
+		<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+	</div>
+</div>
+
+<br>
+
+<!-- This sources the initial car image with both headlights and radio off for use in the following two button functions -->	
+<img id ="carOff" src="images/DSS/DSS carRadioOffHeadlightOff.png" alt="car.png" style="width:1280px;height:720px;" usemap="#carcontrols" class="center">
+
+<!-- This creates the image maps used for both the car radio and car headlight buttons -->	
+<map name="carcontrols">
+<area shape="circle" coords="775, 452, 36" title="carRadioButton" onclick="pressRadioButton0(); toggleAudio0(); showExtraText0(); showDecisionA1(); showDecisionB1()"/>
+<area shape="circle" coords="568, 448, 32" title="carHeadlightButton" onclick="pressHeadlightButton0()"/>
+</map>
+
+<!-- This function switches the radio image from on/off state when the car radio button is pressed -->	
+        <script>
+            var image =  document.getElementById("parkedCar");
+            function pressRadioButton0()
+            {
+                if (image.getAttribute('src') == "images/DSS/DSS carRadioOffHeadlightOff.png")
+                {
+                    image.src = "images/DSS/DSS carRadioOnHeadlightOff.png";
+                }
+				
+				else if (image.getAttribute('src') == "images/DSS/DSS carRadioOnHeadlightOn.png")
+				{
+					image.src = "images/DSS/DSS carRadioOffHeadlightOn.png";
+				}
+				
+				else if (image.getAttribute('src') == "images/DSS/DSS carRadioOffHeadlightOn.png")
+				{
+					image.src = "images/DSS/DSS carRadioOnHeadlightOn.png";
+				}
+				
+                else
+                {
+                    image.src = "images/DSS/DSS carRadioOffHeadlightOff.png";
+                }
+            }
+        </script>	
+	
+<!-- This function switches the headlights image from on/off state when the car headlight button is pressed -->	
+        <script>
+            var image =  document.getElementById("carOff");
+            function pressHeadlightButton0()
+            {
+                if (image.getAttribute('src') == "images/DSS/DSS carRadioOffHeadlightOff.png")
+                {
+                    image.src = "images/DSS/DSS carRadioOffHeadlightOn.png";
+                }
+				
+				else if (image.getAttribute('src') == "images/DSS/DSS carRadioOnHeadlightOff.png")
+				{
+					image.src = "images/DSS/DSS carRadioOnHeadlightOn.png";
+				}
+				
+				else if (image.getAttribute('src') == "images/DSS/DSS carRadioOnHeadlightOn.png")
+				{
+					image.src = "images/DSS/DSS carRadioOnHeadlightOff.png";
+				}
+				
+                else
+                {
+                    image.src = "images/DSS/DSS carRadioOffHeadlightOff.png";
+                }
+            }
+        </script>
+		
+		<br>
+		
+		<p id="p1"> Driving this late and on so little sleep is probably dangerous. Maybe if you turn on the radio it will keep you awake. </p>		
+		
+<!-- This function reveals text after the car radio is pressed -->
+<script type="text/javascript" src="scripts/showExtraText.js"></script>
+		
+		<br>
+
+<!-- This calls in the decisions script to use the functions when the player makes a decision/action -->		
+<p id="pullover"></p>
+<p id="keepdriving"></p>
+<script type="text/javascript" src="scripts/showDecisions.js"></script>
+
+</body>
+</html>

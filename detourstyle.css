@@ -1,0 +1,123 @@
+body {
+  background-color: #222222;
+}
+
+@font-face {
+	font-family: LemonMilk;
+	src: url("Fonts/LEMONMILK-Bold.woff"); 
+}
+
+img {
+	border: 5px solid #4656f4;
+}
+
+.detourStyleButton {
+	float: left;
+}
+
+.blackAndWhiteStyleButton {
+	float: right;
+}
+
+.center {
+	display:block;
+	margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1 {
+  color: #273188;
+  background-color: #4656f4;
+  font-family: LemonMilk, sans-serif;
+  font-size: 600%;
+  text-align: center;
+  display: table;
+  margin: 50px auto 50px auto;
+}
+
+
+h2 {
+  color: #273188;
+  background-color: #4656f4;
+  font-family: LemonMilk, sans-serif;
+  font-size: 200%;
+  text-align: center;
+  display: table;
+  margin: 0px auto 50px auto;
+}
+
+h3 {
+  color: #273188;
+  background-color: #4656f4;
+  font-family: LemonMilk, sans-serif;
+  font-size: 300%;
+  text-align: center;
+  display: table;
+  margin: 0px auto 50px auto;
+}
+
+.h3_button {
+	cursor: pointer;
+	padding: 200px 200px;
+}
+
+.testButton {
+	cursor: pointer;
+}
+
+p {
+  color: #273188;
+  background-color: #4656f4;
+  font-family: LemonMilk, sans-serif;
+  font-size: 200%;
+  text-align: center;
+  display: table;
+  margin: 0px auto 0px auto;
+  
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+.navigation {
+	background-color: #273188;
+	font-family: LemonMilk, sans-serif;
+	overflow: hidden;
+	list-style:none;
+}
+
+.navigation_right {
+	float:right;
+}
+
+.navigation a {
+  float: left;
+  color: #4656f4;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navigation a:hover {
+	background-color: #4656f4;
+	color: #273188;
+}
+
+area
+{
+ cursor:pointer; 
+}
+
+.sleep in car {
+	float:right!important;
+}
+
+.doorOpen {
+	display:none;
+}

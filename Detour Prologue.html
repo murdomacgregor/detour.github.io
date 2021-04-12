@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+			<script>
+				var loadbackground = function () {
+					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
+				}
+
+				window.onload = loadbackground();
+			</script>
+			
+<!-- This calls in the previousPage script for use in the navigation bar -->	
+<script type="text/javascript" src="Scripts/previousPage.js"></script>
+			
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+
+	
+<div class="navigation">
+  <li><a class="active" href="index.html">Main Menu</a></li>
+  <li><a class="active" href="Detour Options.html">Options</a></li>
+  <li><a class="active" onclick="previousPage()">Previous Page</a></li>
+  <li><a class="active" href="Detour Homepage.html">Inventory</a></li>
+  <li><a class="active" onclick="saveProgress.js">Save Game</a></li>
+	<div class="navigation_right">
+		<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+	</div>
+</div>
+
+<br>
+
+<h1>
+
+Prologue
+
+</h1>
+
+<h2> 
+ It's been a long night. You just finished another 12 hour shift at the local petrol station. You don't have many responsibilities at work, but the boredum mixed with the
+ lack of sleep often makes it difficult to stay awake through the night. You have met a lot of strange people over the years during those late hours. 
+ After all, not many people drive through this area - especially at night. Many visitors seem to have peculiar stories, traits and personalities that would stick in your head forever.
+ Even after two years of working there, you never quite get used to eery atmosphere that lingers as you watch the clock painfully slug its' way to the end of your shift. 
+ Usually you take the shorter road home, but due to a fallen tree you have been forced to take a detour down a back road. This route will take you an extra 20 minutes, but 
+ atleast you can finally get some sleep when you make it home...
+</h2>
+
+	
+		<h1><a href="Detour Story Start.html">Continue</a></h1>
+
+
+
+</body>
+</html>

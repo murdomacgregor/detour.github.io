@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+
+<script>
+	function previousPage() {
+		window.history.back();
+	}
+</script>
+		
+	
+<div class="navigation">
+  <li><a class="active" href="Detour Homepage.html">Main Menu</a></li>
+  <li><a class="active" href="Detour Options.html">Options</a></li>
+  <li><a class="active" onclick="previousPage()">Previous Page</a></li>
+  <li><a class="active" href="Detour Homepage.html">Inventory</a></li>
+	<div class="navigation_right">
+		<li><a class="active" href+"Murdo Macgregor.html">By Murdo Macgregor | 40438627</a></li>
+	</div>
+</div>
+
+<br>
+
+<h1>
+
+Options
+
+</h1>
+
+<h2> To view your selected options, please refresh this page </h2> 
+
+<h2> Colour styling: Use these buttons to customize the appearance of the game to better suit your requirements. </h2>
+
+<div class="detourstyle_img">
+	<img id ="Detour Styling" src="images/detourstyle_example.png" alt="detourstyle_example.png" style="width:200px;height:200px;" class="detourStyleButton">
+</div>
+
+<br>
+
+	<div class="detourStyleButton">
+		<h2 href="#" onclick="swapStyleSheet('detourstyle.css')">Change style to Detour</h2>
+	</div>
+
+	<div class="blackAndWhiteButton">
+		<h2 href="#" onclick="swapStyleSheet('blackAndWhite.css')">Change style to Black and White</h2>
+	</div>
+
+<br>
+
+	<div class="h3_button">
+		<h3 onclick="previousPage()" class="button">Return To Game</h3>
+	</div>
+
+</body>
+</html>
