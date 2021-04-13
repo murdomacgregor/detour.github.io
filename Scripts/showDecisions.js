@@ -73,5 +73,4 @@
 				var decision = "Nope. Back to the car.";
 				var result = decision.link("Detour Story A6.html");
 				document.getElementById("goBackToCar").innerHTML = result;
-				document.getElementById("goBackToCar").style.cssFloat = "center"
 			}
