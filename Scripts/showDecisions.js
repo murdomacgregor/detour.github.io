@@ -54,3 +54,17 @@
 				document.getElementById("goBackToCar").innerHTML = result;
 				document.getElementById("goBackToCar").style.cssFloat = "right"
 			}
+			
+			function showDecisionA7() {
+				var decision = "Follow the blood trail";
+				var result = decision.link("Detour Story A7.html");
+				document.getElementById("followBloodTrail").innerHTML = result
+				document.getElementById("followBloodTrail").style.cssFloat = "right"
+			}
+			
+			function showDecisionA9() {
+				var decision = "Follow the footsteps";
+				var result = decision.link("Detour Story A9.html");
+				document.getElementById("followFootsteps").innerHTML = result;
+				document.getElementById("followFootsteps").style.cssFloat = "left"
+			}
