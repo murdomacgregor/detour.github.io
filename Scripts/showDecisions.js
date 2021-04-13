@@ -68,3 +68,10 @@
 				document.getElementById("followFootsteps").innerHTML = result;
 				document.getElementById("followFootsteps").style.cssFloat = "left"
 			}
+
+			function showDecisionA65() {
+				var decision = "Nope. Back to the car.";
+				var result = decision.link("Detour Story A6.html");
+				document.getElementById("goBackToCar").innerHTML = result;
+				document.getElementById("goBackToCar").style.cssFloat = "center"
+			}
