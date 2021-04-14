@@ -49,7 +49,7 @@
 			}
 			
 			function showDecisionA6() {
-				var decision = "Run back to the car";
+				var decision = "Go back to the car";
 				var result = decision.link("Detour Story A6.html");
 				document.getElementById("goBackToCar").innerHTML = result;
 				document.getElementById("goBackToCar").style.cssFloat = "right"
@@ -75,3 +75,39 @@
 				document.getElementById("goBackToCarA65").innerHTML = result;
 				document.getElementById("goBackToCarA65").style.margin = "0 auto";
 			}
+			
+			function showDecisionBackToOuthouse() {
+				var decision = "Turn back to the outhouse";
+				var result = decision.link("Detour Story A25.html");
+				document.getElementById("turnBackToOuthouse").innerHTML = result;
+				document.getElementById("turnBackToOuthouse").style.cssFloat = "right";
+			}
+			
+			function showDecisionD2() {
+				var decision = "Check out your car";
+				var result = decision.link("Detour Story D2.html");
+				document.getElementById("checkOutYourCar").innerHTML = result;
+				document.getElementById("checkOutYourCar").style.cssFloat = "Left";
+			}
+			
+			function showDecisionD3() {
+				var decision = "Check out your car";
+				var result = decision.link("Detour Story D2.html");
+				document.getElementById("checkOutYourCar2").innerHTML = result;
+				document.getElementById("checkOutYourCar2").style.margin = "0 auto";
+			}
+			
+			function showDecisionA66() {
+				var decision = "Go back to the car";
+				var result = decision.link("Detour Story A6.html");
+				document.getElementById("goBackToCar2").innerHTML = result;
+				document.getElementById("goBackToCar2").style.margin = "0 auto";
+			}
+			
+			function showDecisionNR() {
+				var decision = "Go back to the car";
+				var result = decision.link("Detour Story A65.html");
+				document.getElementById("goBackToCarNR").innerHTML = result;
+				document.getElementById("goBackToCarNR").style.cssFloat = "right";
+			}
+			

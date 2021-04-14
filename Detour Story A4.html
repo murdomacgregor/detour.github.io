@@ -44,7 +44,7 @@
 <!-- This creates the image maps used for both the the open and closed outhouse door -->	
 <map name="openAndCloseDoor">
 	<area shape="poly" coords="759, 293, 771, 293, 776, 369, 763, 369" title="outhouseDoorClosed" onclick="doorOpen(); doorOpenSound();"/>
-	<area shape="poly" coords="233, 396, 244, 393, 261, 465, 249, 469" title="outhouseDoorOpened" onclick="doorClose(); doorCloseSound(); showExtraText5(); showDecisionA5(); showDecisionA6();"/>
+	<area shape="poly" coords="233, 396, 244, 393, 261, 465, 249, 469" title="outhouseDoorOpened" onclick="doorClose(); doorCloseSound(); showExtraText5(); showDecisionA5(); showDecisionNR();"/>
 </map>
 
 <!-- This function opens the outhouse door -->	
@@ -94,7 +94,7 @@
 <!-- This calls in the decisions script to use the functions when the player makes a decision/action -->	
 
 	<p id="inspectBlood" class="decision"></p>
-	<p id="goBackToCar" class="decision"></p>
+	<p id="goBackToCarNR" class="decision"></p>
 
 		<script type="text/javascript" src="Scripts/showDecisions.js"></script>
 </body>
