@@ -96,17 +96,48 @@ a {
 }
 
 .navigation a {
-  float: left;
-  color: #4656f4;
-  text-align: center;
-  padding: 20px 20px;
-  text-decoration: none;
-  font-size: 20px;
+	float: left;
+	color: #4656f4;
+	text-align: center;
+	padding: 20px 20px;
+	text-decoration: none;
+	font-size: 20px;
 }
 
 .navigation a:hover {
 	background-color: #4656f4;
 	color: #273188;
+}
+
+.dropdown {
+  float: left;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #273188;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #4656f4;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #4656f4;
+	color: #273188;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 area
@@ -121,3 +152,7 @@ area
 .doorOpen {
 	display:none;
 }
+
+.decision {
+	background-color:#273188!important;
+	color: #4656f4!important;

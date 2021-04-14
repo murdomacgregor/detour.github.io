@@ -4,6 +4,7 @@
 			var A2doorOpen = new Audio("Sounds/doorClose.mp3");
 			var A2noteSnatch = new Audio("Sounds/noteOnWallSnatch.mp3");
 			var backgroundMusic = new Audio("Sounds/backgroundMusic.mp3");
+			var paperFold = new Audio("Sounds/paperFold.mp3");
 			var isPlaying = false;
 		
 			function toggleAudio0(){
@@ -87,5 +88,19 @@
 			};
 	
 			backgroundMusic.onpause = function() {
+				isPlaying = false;
+			};
+
+			function paperFold(){
+			isPlaying ? paperFold.pause() : paperFold.play();
+			};
+			
+			paperFold.loop = false;
+			
+			paperFold.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			paperFold.onpause = function() {
 				isPlaying = false;
 			};

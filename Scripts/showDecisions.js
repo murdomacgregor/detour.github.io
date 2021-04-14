@@ -72,5 +72,6 @@
 			function showDecisionA65() {
 				var decision = "Nope. Back to the car.";
 				var result = decision.link("Detour Story A6.html");
-				document.getElementById("goBackToCar").innerHTML = result;
+				document.getElementById("goBackToCarA65").innerHTML = result;
+				document.getElementById("goBackToCarA65").style.margin = "0 auto";
 			}
