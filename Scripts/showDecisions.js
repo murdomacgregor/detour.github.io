@@ -109,7 +109,14 @@
 				var decision = "Go back to the car";
 				var result = decision.link("Detour Story A65.html");
 				document.getElementById("goBackToCarA65").innerHTML = result;
-				document.getElementById("goBackToCarA65").style.cssFloat = "right"
+				document.getElementById("goBackToCarA65").style.margin = "0 auto";
+			}
+			
+			function showDecisionA65R() {
+				var decision = "Go back to the car";
+				var result = decision.link("Detour Story A65.html");
+				document.getElementById("goBackToCarA65Right").innerHTML = result;
+				document.getElementById("goBackToCarA65Right").style.cssFloat = "right";
 			}
 			
 			function showDecisionA66() {
