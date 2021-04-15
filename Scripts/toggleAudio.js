@@ -4,7 +4,7 @@
 			var A2doorOpen = new Audio("Sounds/doorClose.mp3");
 			var A2noteSnatch = new Audio("Sounds/noteOnWallSnatch.mp3");
 			var backgroundMusic = new Audio("Sounds/backgroundMusic.mp3");
-			var paperFold = new Audio("Sounds/paperFold.mp3");
+			var theEndD2 = new Audio("Sounds/youDiedGunshot.mp3");
 			var isPlaying = false;
 		
 			function toggleAudio0(){
@@ -77,6 +77,35 @@
 				isPlaying = false;
 			};
 			
+			function grabWindshieldNote(){
+			isPlaying ? A2noteSnatch.pause() : A2noteSnatch.play();
+			};
+			
+			A2noteSnatch.loop = false;
+			
+			A2noteSnatch.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			A2noteSnatch.onpause = function() {
+				isPlaying = false;
+			};
+			
+			function youDiedMusic(){
+			isPlaying ? theEndD2.pause() : theEndD2.play();
+			};
+			
+			theEndD2.loop = false;
+			
+			theEndD2.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			theEndD2.onpause = function() {
+				isPlaying = false;
+				
+			};
+			
 			function mainMenuMusic(){
 			isPlaying ? backgroundMusic.pause() : backgroundMusic.play();
 			};
@@ -90,17 +119,4 @@
 			backgroundMusic.onpause = function() {
 				isPlaying = false;
 			};
-
-			function paperFold(){
-			isPlaying ? paperFold.pause() : paperFold.play();
-			};
 			
-			paperFold.loop = false;
-			
-			paperFold.onplaying = function() {
-				isPlaying = true;
-			};
-	
-			paperFold.onpause = function() {
-				isPlaying = false;
-			};

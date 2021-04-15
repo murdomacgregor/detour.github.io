@@ -27,3 +27,13 @@
 			{
 				document.getElementById("p1").innerHTML = "Wait, was that there before? Is that blood?";
 			}
+			
+			function showExtraTextD2() 
+			{
+				document.getElementById("p1").innerHTML = "Um, what?";
+			}
+			
+			function hideExtraTextD2() 
+			{
+				document.getElementById("p1").innerHTML = "";
+			}
