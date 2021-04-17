@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+			<script>
+				var loadbackground = function () {
+					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
+				}
+
+				window.onload = loadbackground();
+			</script>
+
+<!-- This calls in the previousPage script for use in the navigation bar -->	
+<script type="text/javascript" src="Scripts/previousPage.js"></script>
+
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/toggleAudio.js"></script>
+
+</head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<body onload="showDecisionFollowFish(); showDecisionFollowSnake(); showDecisionFollowCrow();">
+
+	<!-- This builds the navigation bar including the links/functions for each button -->		
+	<div class="navigation">
+		<li><a class="active" href="index.html">Main Menu</a></li>
+		<li><a class="active" href="Detour Options.html">Options</a></li>
+	<li><a class="active" onclick="previousPage()">Previous Page</a></li>
+	<li><a class="active" href="Detour Homepage.html">Inventory</a></li>
+	<li><a class="active" onclick="savedGame()">Save Game</a></li>
+		<div class="navigation_right">
+			<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+		</div>
+	</div>
+
+<br>
+
+<!-- This sources the initial door closed image and door open image (this is hidden, only used to create imagemap) for use in the door open/close functions -->	
+	<img id ="threePaths" src="Images/A7/A7 Rock Still.png" alt="A7RockStill.png" style="width:1280px;height:720px;" usemap="#rock" class="center">
+	
+<!-- This creates the image maps used for both the the open and closed outhouse door -->	
+<map name="rock">
+	<area shape="poly" coords="363, 520, 365, 488, 379, 458, 394, 435, 417, 431, 432, 424, 458, 429, 475, 438, 492, 460, 501, 485, 509, 506, 498, 529, 471, 543, 432, 553, 399, 555, 381, 543" title="moveTheRock" href="Detour Story A7Note.html"/>
+</map>
+
+		<br>
+		
+		<p id="p1"> You follow the footsteps. They seem to trail off into the grass. There are three paths to take. </p>	
+		
+		<br>
+
+		
+<!-- This function reveals text after the car radio is pressed -->
+<script type="text/javascript" src="Scripts/showExtraText.js"></script>
+
+<!-- This calls in the decisions script to use the functions when the player makes a decision/action -->	
+
+	<p id="followFish" class="decision"></p>
+	<p id="followSnake" class="decision"></p>
+	<p id="followCrow" class="decision"></p>
+
+		<script type="text/javascript" src="Scripts/showDecisions.js"></script>
+</body>
+</html>

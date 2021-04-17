@@ -57,14 +57,14 @@
 			
 			function showDecisionA7() {
 				var decision = "Follow the blood trail";
-				var result = decision.link("Detour Story A7.html");
+				var result = decision.link("Detour Story A9.html");
 				document.getElementById("followBloodTrail").innerHTML = result
 				document.getElementById("followBloodTrail").style.cssFloat = "right"
 			}
 			
 			function showDecisionA9() {
 				var decision = "Follow the footsteps";
-				var result = decision.link("Detour Story A9.html");
+				var result = decision.link("Detour Story A7.html");
 				document.getElementById("followFootsteps").innerHTML = result;
 				document.getElementById("followFootsteps").style.cssFloat = "left"
 			}
@@ -131,4 +131,26 @@
 				var result = decision.link("index.html");
 				document.getElementById("startOver").innerHTML = result;
 				document.getElementById("startOver").style.margin = "0 auto";
+			}
+			
+			function showDecisionFollowFish() {
+				var decision = "Follow the Fish";
+				var result = decision.link("index.html");
+				document.getElementById("followFish").innerHTML = result;
+				document.getElementById("followFish").style.cssFloat = "left";
+			}
+
+			
+			function showDecisionFollowSnake() {
+				var decision = "Follow the Snake";
+				var result = decision.link("index.html");
+				document.getElementById("followSnake").innerHTML = result;
+				document.getElementById("followSnake").style.cssFloat = "right";
+			}
+			
+			function showDecisionFollowCrow() {
+				var decision = "Follow the Crow";
+				var result = decision.link("index.html");
+				document.getElementById("followCrow").innerHTML = result;
+				document.getElementById("followCrow").style.margin = "0 auto";
 			}

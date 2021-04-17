@@ -37,3 +37,8 @@
 			{
 				document.getElementById("p1").innerHTML = "";
 			}
+			
+			function showExtraTextA7() 
+			{
+				document.getElementById("p1").innerHTML = "You move the rock and find another note underneath";
+			}
