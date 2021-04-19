@@ -16,6 +16,12 @@
 <!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
 <script type="text/javascript" src="Scripts/toggleAudio.js"></script>
 
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/checkNote.js"></script>
+
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/saveGame.js"></script>
+
 </head>
 
 
@@ -53,7 +59,7 @@
 	<area shape="rect" coords="694,295,736,336" title="nine" onclick="keypadNine(); pressButton1();"/>
 	<area shape="rect" coords="692,483,766,526" title="enter" onclick="setTimeout(checkAnswer, 1000); enterButton();"/>
 	<area shape="rect" coords="516,483,588,523" title="delete" onclick="keypadDelete(); deleteButton();"/>
-	<area shape="poly" coords="754,163,766,255,807,253,844,246,866,245,872,220,870,197,862,177,849,161,811,157" title="postit" onclick="doSomething()"/>
+	<area shape="poly" coords="754,163,766,255,807,253,844,246,866,245,872,220,870,197,862,177,849,161,811,157" title="postit" onclick="checkNote();"/>
 </map>
 
 		<br>
@@ -68,7 +74,5 @@
 <script type="text/javascript" src="Scripts/showExtraText.js"></script>
 <!-- This function calls in the script for the keypad entries -->		
 <script type="text/javascript" src="Scripts/keypadEntries.js"></script>
-<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
-<script type="text/javascript" src="Scripts/checkNote.js"></script>
 </body>
 </html>

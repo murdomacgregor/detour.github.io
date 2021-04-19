@@ -25,7 +25,7 @@
   <li><a class="active" href="Detour Options.html">Options</a></li>
   <li><a class="active" onclick="previousPage()">Previous Page</a></li>
   <li><a class="active" href="Detour Homepage.html">Inventory</a></li>
-  <li><a class="active" onclick="testButton0()">Save Game</a></li>
+  <li><a class="active" onclick="saveGame()">Save Game</a></li>
 	<div class="navigation_right">
 		<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
 	</div>
@@ -40,7 +40,7 @@
 	<img id="detourHomepage" src="Images/Detour Homepage Muted.png" alt="Detour: A Choose Your Own Adventure Game by Murdo Macgregor" style="width:1280px;height:720px;" usemap="#homepage" class="center">
 
 		<map name="homepage">
-			<area shape="rect" coords="664, 395, 1177, 472" href="Detour WIP.html"/>
+			<area shape="rect" coords="664, 395, 1177, 472" onclick="loadGame();"/>
 			<area shape="rect" coords="797, 497, 1177, 553" href="Detour BYP.html"/>
 			<area shape="rect" coords="869, 574, 1177, 629" href="Detour Options.html"/>
 			<area shape="rect" coords="48, 548, 181, 662" onclick="mainMenuMute(); mainMenuMusic();"/>
