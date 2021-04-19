@@ -16,17 +16,16 @@
 <!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
 <script type="text/javascript" src="Scripts/toggleAudio.js"></script>
 
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/checkNote.js"></script>
+
 </head>
 
-<script>
-document.cookie="hasNote=0";
-</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <body>
-
 
 	<!-- This builds the navigation bar including the links/functions for each button -->		
 	<div class="navigation">
@@ -43,63 +42,55 @@ document.cookie="hasNote=0";
 <br>
 
 <!-- This sources the initial door closed image and door open image (this is hidden, only used to create imagemap) for use in the door open/close functions -->	
-	<img id ="doorShut" src="Images/A4/A4 Door Open.png" alt="doorOpenedNoNote.png" style="width:1280px;height:720px;" usemap="#openAndCloseDoor" class="center">
-	
-<!-- This creates the image maps used for both the the open and closed outhouse door -->	
-<map name="openAndCloseDoor">
-	<area shape="poly" coords="759, 293, 771, 293, 776, 369, 763, 369" title="outhouseDoorClosed" onclick="doorOpen(); doorOpenSound();"/>
-	<area shape="poly" coords="233, 396, 244, 393, 261, 465, 249, 469" title="outhouseDoorOpened" onclick="doorClose(); doorCloseSound(); showExtraText5(); showDecisionA5(); showDecisionA66();"/>
-</map>
+	<img id ="death2" src="Images/D2/D2 Car Note.png" alt="d2CarNote.png" style="width:1280px;height:720px;" usemap="#D2CarNote" class="center">
 
-<!-- This function opens the outhouse door -->	
-        <script>
-            var image =  document.getElementById("doorShut");
-            function doorOpen()
-            {
-                if (image.getAttribute('src') == "Images/A4/A4 Door Open.png")
-                {
-                   image.src = "Images/A4/A4 Door Shut.png";
-                }
-				
-                else
-                {
-                    image.src = "Images/A4/A4 Door Open.png";
-                }
-            }
-        </script>
-		
-<!-- This function closes the outhouse door -->	
-        <script>
-            var image =  document.getElementById("doorShut");
-            function doorClose()
-            {
-                if (image.getAttribute('src') == "Images/A4/A4 Door Shut.png")
-                {
-                   image.src = "Images/A4/A4 Door Open.png";
-                }
-				
-                else
-                {
-                    image.src = "Images/A4/A4 Door Shut.png";
-                }
-            }
-        </script>
-		
+<map name="D2CarNote">
+	<area shape="poly" coords="799, 472, 829, 469, 837, 499, 815, 508" title="windshieldNote" onclick="readWindshieldNote(); showExtraTextD2(); grabWindshieldNote(); setTimeout(gameOverD2, 3000); setTimeout(hideExtraTextD2, 3000); setTimeout(youDied, 3000); setTimeout(youDiedMusic, 3000);"/>
+</map>
 		<br>
 		
-		<p id="p1"> You leave the strange note in the outhouse. What does it mean by "evade the hunt"? </p>	
-
+		<p id="p1"> The car has been sabotaged. The front tire has been popped, the damage renders the car useless. Is that a note on the windshield? </p>	
 		
-<!-- This function reveals text after the car radio is pressed -->
+<!-- This function reads the note on the windshield -->	
+        <script>
+            var image =  document.getElementById("death2");
+            function readWindshieldNote()
+            {
+                if (image.getAttribute('src') == "Images/D2/D2 Car Note.png")
+                {
+                   image.src = "Images/D2/D2 Read Note.png";
+                }
+				
+                else
+                {
+                    image.src = "Images/D2/D2 Car Note.png";
+                }
+            }
+        </script>
+
+<!-- This function ends the game -->	
+        <script>
+            var image =  document.getElementById("death2");
+			function gameOverD2()
+            {
+                if (image.getAttribute('src') == "Images/D2/D2 Read Note.png")
+                {
+                   image.src = "Images/D2/D2 After Shot.png";
+                }
+				
+                else
+                {
+                    image.src = "Images/D2/D2 Read Note.png";
+                }
+            }
+        </script>
+		
+<!-- This function reveals text after the windhsield note is clicked on -->
 <script type="text/javascript" src="Scripts/showExtraText.js"></script>
 
 		<br>
-
-<!-- This calls in the decisions script to use the functions when the player makes a decision/action -->	
-
-	<p id="inspectBlood" class="decision"></p>
-	<p id="goBackToCarA66" class="decision"></p>
-
-		<script type="text/javascript" src="Scripts/showDecisions.js"></script>
+		
+		<h1 id="startOver" class="decision"></h1>
+			<script type="text/javascript" src="Scripts/showDecisions.js"></script>
 </body>
 </html>

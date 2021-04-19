@@ -42,3 +42,24 @@
 			{
 				document.getElementById("p1").innerHTML = "You move the rock and find another note underneath";
 			}
+			
+			function crowFindCamera() 
+			{
+				document.getElementById("p1").innerHTML = "Is it just dark back there, or does that look like a camera? Why would there be a camera way out here?";
+			}
+			
+			function cameraExtraText() 
+			{
+				document.getElementById("p2").innerHTML = "There is also what looks like a camera glaring down at it. Why would this technology be in an abandoned structure?";
+			}
+			
+			function ventExtraText() 
+			{
+				document.getElementById("p3").innerHTML = "You notice a vent high up on the wall. Modern ventilation in an ancient building seems really strange...";
+			}
+			
+			function doorExtraText() 
+			{
+				document.getElementById("p4").innerHTML = "The only other visible door is blocked off. Seems like somebody doesn't want people going down that path.";
+			}
+			

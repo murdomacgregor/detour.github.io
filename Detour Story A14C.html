@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+			<script>
+				var loadbackground = function () {
+					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
+				}
+
+				window.onload = loadbackground();
+			</script>
+
+<!-- This calls in the previousPage script for use in the navigation bar -->	
+<script type="text/javascript" src="Scripts/previousPage.js"></script>
+
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/toggleAudio.js"></script>
+
+</head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+
+	<!-- This builds the navigation bar including the links/functions for each button -->		
+	<div class="navigation">
+		<li><a class="active" href="index.html">Main Menu</a></li>
+		<li><a class="active" href="Detour Options.html">Options</a></li>
+	<li><a class="active" onclick="previousPage()">Previous Page</a></li>
+	<li><a class="active" href="Detour Homepage.html">Inventory</a></li>
+	<li><a class="active" onclick="savedGame()">Save Game</a></li>
+		<div class="navigation_right">
+			<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+		</div>
+	</div>
+
+<br>
+
+<!-- This sources the initial door closed image and door open image (this is hidden, only used to create imagemap) for use in the door open/close functions -->	
+	<img id ="templeKeypad" src="Images/A14C/A14C.png" alt="A14C.png" style="width:1280px;height:720px;" usemap="#keypadCloseUp" class="center">
+
+<map name="keypadCloseUp">
+	<area shape="rect" coords="667,530,617,479" title="zero" onclick="keypadZero(); pressButton1();"/>
+	<area shape="rect" coords="549,423,584,456" title="one" onclick="keypadOne(); pressButton2();"/>
+	<area shape="rect" coords="620,422,664,462" title="two" onclick="keypadTwo(); pressButton1();"/>
+	<area shape="rect" coords="693,421,736,460" title="three" onclick="keypadThree(); pressButton2();"/>
+	<area shape="rect" coords="544,359,587,396" title="four" onclick="keypadFour(); pressButton2();"/>
+	<area shape="rect" coords="619,361,661,399" title="five" onclick="keypadFive(); pressButton1();"/>
+	<area shape="rect" coords="697,362,733,395" title="six" onclick="keypadSix(); pressButton1();"/>
+	<area shape="rect" coords="544,296,589,335" title="seven" onclick="keypadSeven(); pressButton1();"/>
+	<area shape="rect" coords="619,296,660,335" title="eight" onclick="keypadEight(); pressButton2();"/>
+	<area shape="rect" coords="694,295,736,336" title="nine" onclick="keypadNine(); pressButton1();"/>
+	<area shape="rect" coords="692,483,766,526" title="enter" onclick="setTimeout(checkAnswer, 1000); enterButton();"/>
+	<area shape="rect" coords="516,483,588,523" title="delete" onclick="keypadDelete(); deleteButton();"/>
+	<area shape="poly" coords="754,163,766,255,807,253,844,246,866,245,872,220,870,197,862,177,849,161,811,157" title="postit" onclick="doSomething()"/>
+</map>
+
+		<br>
+		
+		<p id="p1"> What does this keypad do? There is a hint on a post-it note next to the panel, but what could it mean by the "first note"?  </p>	
+		
+		<br>
+		
+		<p id="p5"></p>
+		
+<!-- This function reveals text after the car radio is pressed -->
+<script type="text/javascript" src="Scripts/showExtraText.js"></script>
+<!-- This function calls in the script for the keypad entries -->		
+<script type="text/javascript" src="Scripts/keypadEntries.js"></script>
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/checkNote.js"></script>
+</body>
+</html>

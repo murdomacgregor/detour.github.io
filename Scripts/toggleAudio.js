@@ -5,6 +5,10 @@
 			var A2noteSnatch = new Audio("Sounds/noteOnWallSnatch.mp3");
 			var backgroundMusic = new Audio("Sounds/backgroundMusic.mp3");
 			var theEndD2 = new Audio("Sounds/youDiedGunshot.mp3");
+			var buttonPress1 = new Audio("Sounds/buttonPress1.mp3");
+			var buttonPress2 = new Audio("Sounds/buttonPress2.mp3");
+			var buttonDelete = new Audio("Sounds/buttonDelete.mp3");
+			var buttonEnter = new Audio("Sounds/buttonEnter.mp3");
 			var isPlaying = false;
 		
 			function toggleAudio0(){
@@ -110,7 +114,7 @@
 			isPlaying ? backgroundMusic.pause() : backgroundMusic.play();
 			};
 			
-			backgroundMusic.loop = false;
+			backgroundMusic.loop = true;
 			
 			backgroundMusic.onplaying = function() {
 				isPlaying = true;
@@ -120,3 +124,58 @@
 				isPlaying = false;
 			};
 			
+			function pressButton1(){
+			isPlaying ? buttonPress1.pause() : buttonPress1.play();
+			};
+			
+			buttonPress1.loop = false;
+			
+			buttonPress1.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			buttonPress1.onpause = function() {
+				isPlaying = false;
+			};
+			
+			function pressButton2(){
+			isPlaying ? buttonPress2.pause() : buttonPress2.play();
+			};
+			
+			buttonPress2.loop = false;
+			
+			buttonPress2.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			buttonPress2.onpause = function() {
+				isPlaying = false;
+			};
+			
+			function enterButton(){
+			isPlaying ? buttonEnter.pause() : buttonEnter.play();
+			};
+			
+			buttonEnter.loop = false;
+			
+			buttonEnter.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			buttonEnter.onpause = function() {
+				isPlaying = false;
+			};
+
+			function deleteButton(){
+			isPlaying ? buttonDelete.pause() : buttonDelete.play();
+			};
+			
+			buttonDelete.loop = false;
+			
+			buttonDelete.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			buttonDelete.onpause = function() {
+				isPlaying = false;
+			};			

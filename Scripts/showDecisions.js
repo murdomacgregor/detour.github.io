@@ -135,7 +135,7 @@
 			
 			function showDecisionFollowFish() {
 				var decision = "Follow the Fish";
-				var result = decision.link("index.html");
+				var result = decision.link("Detour Story A12F.html");
 				document.getElementById("followFish").innerHTML = result;
 				document.getElementById("followFish").style.cssFloat = "left";
 			}
@@ -143,14 +143,22 @@
 			
 			function showDecisionFollowSnake() {
 				var decision = "Follow the Snake";
-				var result = decision.link("index.html");
+				var result = decision.link("Detour Story A12S.html");
 				document.getElementById("followSnake").innerHTML = result;
 				document.getElementById("followSnake").style.cssFloat = "right";
 			}
 			
 			function showDecisionFollowCrow() {
 				var decision = "Follow the Crow";
-				var result = decision.link("index.html");
+				var result = decision.link("Detour Story A12C.html");
 				document.getElementById("followCrow").innerHTML = result;
 				document.getElementById("followCrow").style.margin = "0 auto";
 			}
+			
+			function showDecisionEnterCrowTemple() {
+				var decision = "Enter Crow Temple";
+				var result = decision.link("Detour Story A13C.html");
+				document.getElementById("enterCrowTemple").innerHTML = result;
+				document.getElementById("enterCrowTemple").style.margin = "0 auto";
+			}
+			

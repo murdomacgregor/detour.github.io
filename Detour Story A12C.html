@@ -22,7 +22,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<body onload="showDecisionFollowFish(); showDecisionFollowSnake(); showDecisionFollowCrow();">
+<body onload="showDecisionEnterCrowTemple();">
 
 	<!-- This builds the navigation bar including the links/functions for each button -->		
 	<div class="navigation">
@@ -39,16 +39,16 @@
 <br>
 
 <!-- This sources the initial door closed image and door open image (this is hidden, only used to create imagemap) for use in the door open/close functions -->	
-	<img id ="threePaths" src="Images/A7/A7 Rock Still.png" alt="A7RockStill.png" style="width:1280px;height:720px;" usemap="#rockandpaths" class="center">
+	<img id ="crowTemple" src="Images/A12C/A12C.png" alt="A12C.png" style="width:1280px;height:720px;" usemap="#crowTemple" class="center">
 	
 <!-- This creates the image maps used for both the the open and closed outhouse door -->	
-<map name="rockandpaths">
-	<area shape="poly" coords="363, 520, 365, 488, 379, 458, 394, 435, 417, 431, 432, 424, 458, 429, 475, 438, 492, 460, 501, 485, 509, 506, 498, 529, 471, 543, 432, 553, 399, 555, 381, 543" title="moveTheRock" href="Detour Story A7Note.html"/>
+<map name="crowTemple">
+	<area shape="poly" coords="209, 54, 193, 37, 207, 27, 222, 27, 231, 36, 228, 48" title="findCamera" onclick="crowFindCamera();"/>
 </map>
 
 		<br>
 		
-		<p id="p1"> You follow the footsteps. They seem to trail off into the grass. There are three paths to take. </p>	
+		<p id="p1"> You follow the path of the crow. After following the trail you stumble upon a structure. It looks like an old temple or castle. </p>	
 		
 		<br>
 
@@ -58,9 +58,7 @@
 
 <!-- This calls in the decisions script to use the functions when the player makes a decision/action -->	
 
-	<p id="followFish" class="decision"></p>
-	<p id="followSnake" class="decision"></p>
-	<p id="followCrow" class="decision"></p>
+	<p id="enterCrowTemple" class="decision"></p>
 
 		<script type="text/javascript" src="Scripts/showDecisions.js"></script>
 </body>

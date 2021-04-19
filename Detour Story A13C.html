@@ -22,7 +22,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<body onload="showDecisionFollowFish(); showDecisionFollowSnake(); showDecisionFollowCrow();">
+<body>
 
 	<!-- This builds the navigation bar including the links/functions for each button -->		
 	<div class="navigation">
@@ -39,29 +39,30 @@
 <br>
 
 <!-- This sources the initial door closed image and door open image (this is hidden, only used to create imagemap) for use in the door open/close functions -->	
-	<img id ="threePaths" src="Images/A7/A7 Rock Still.png" alt="A7RockStill.png" style="width:1280px;height:720px;" usemap="#rockandpaths" class="center">
+	<img id ="crowTemple" src="Images/A13C/A13C.png" alt="A13C.png" style="width:1280px;height:720px;" usemap="#pressKeypadAndCamera" class="center">
 	
 <!-- This creates the image maps used for both the the open and closed outhouse door -->	
-<map name="rockandpaths">
-	<area shape="poly" coords="363, 520, 365, 488, 379, 458, 394, 435, 417, 431, 432, 424, 458, 429, 475, 438, 492, 460, 501, 485, 509, 506, 498, 529, 471, 543, 432, 553, 399, 555, 381, 543" title="moveTheRock" href="Detour Story A7Note.html"/>
+<map name="pressKeypadAndCamera">
+	<area shape="poly" coords="615, 269, 663, 270, 664, 327, 616, 329" title="keypad" href="Detour Story A14C.html"/>
+	<area shape="poly" coords="1076, 95, 1048, 93, 1048, 78, 1035, 77, 1030, 65, 1036, 56, 1059, 45, 1078 45, 1079, 59" title="camera" onclick="cameraExtraText();"/>
+	<area shape="poly" coords="88, 97, 87, 50, 173, 42, 176, 76" title="vent" onclick="ventExtraText();"/>
+	<area shape="poly" coords="183,617,166,579,190,559,193,515,155,486,200,475,207,433,187,436,181,414,217,394,198,371,207,358,168,331,181,313,225,341,226,322,250,305,296,289,323,269,335,279,340,275,357,282,356,291,378,310,379,308,378,323,394,318,400,336,376,349,375,375,399,370,403,388,376,393,373,425,398,420,402,439,387,443,391,455,379,474,371,470,367,488,384,491,382,508" title="vent" onclick="doorExtraText();"/>
 </map>
 
 		<br>
 		
-		<p id="p1"> You follow the footsteps. They seem to trail off into the grass. There are three paths to take. </p>	
+		<p id="p1"> You enter the strange structure. There is a solitary keypad in the room. Why were you led here?</p>	
+		<br>
+		<p id="p2"></p>
+		<br>
+		<p id="p3"></p>
+		<br>
+		<p id="p4"></p>
 		
 		<br>
 
 		
 <!-- This function reveals text after the car radio is pressed -->
 <script type="text/javascript" src="Scripts/showExtraText.js"></script>
-
-<!-- This calls in the decisions script to use the functions when the player makes a decision/action -->	
-
-	<p id="followFish" class="decision"></p>
-	<p id="followSnake" class="decision"></p>
-	<p id="followCrow" class="decision"></p>
-
-		<script type="text/javascript" src="Scripts/showDecisions.js"></script>
 </body>
 </html>
