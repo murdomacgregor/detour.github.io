@@ -9,9 +9,9 @@ function checkNote() {
 	}
 	
 function doSomething() {
-    var myCookie = getCookie("hasNote");
+    var hasNote = getCookie("hasNote");
 
-    if (myCookie == null) {
+    if (hasNote == null) {
         // do cookie doesn't exist stuff;
 		document.getElementById("p5").innerHTML = "You don't have the first note with you. Was there a number on the note? Maybe that number is the number needed for this keypad... You will have to guess.";
     }
