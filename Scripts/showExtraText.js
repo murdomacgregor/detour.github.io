@@ -63,3 +63,9 @@
 				document.getElementById("p4").innerHTML = "The only other visible door is blocked off. Seems like somebody doesn't want people going down that path.";
 			}
 			
+			function stepBackKeypad() 
+			{
+				document.getElementById("p1").innerHTML = 'The door slams shut. Gas leaks in from the vent. A mysterious voice announces: "What a pity, I thought we finally found the one. You failed the H.U.N.T. Goodbye."';
+			}
+			
+		

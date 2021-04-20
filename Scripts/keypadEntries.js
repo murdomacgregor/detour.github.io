@@ -50,6 +50,6 @@ function checkAnswer(){
 		}
 		
 		else {
-			window.location.href = "index.html";
+			window.location.href = "Detour Story D3.html";
 		}
 	}

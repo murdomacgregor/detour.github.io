@@ -5,10 +5,12 @@
 			var A2noteSnatch = new Audio("Sounds/noteOnWallSnatch.mp3");
 			var backgroundMusic = new Audio("Sounds/backgroundMusic.mp3");
 			var theEndD2 = new Audio("Sounds/youDiedGunshot.mp3");
+			var theEndD3 = new Audio("Sounds/youDied.mp3");
 			var buttonPress1 = new Audio("Sounds/buttonPress1.mp3");
 			var buttonPress2 = new Audio("Sounds/buttonPress2.mp3");
 			var buttonDelete = new Audio("Sounds/buttonDelete.mp3");
 			var buttonEnter = new Audio("Sounds/buttonEnter.mp3");
+			var metalClose = new Audio("Sounds/doorCloseAndLock F.mp3");
 			var isPlaying = false;
 		
 			function toggleAudio0(){
@@ -109,6 +111,21 @@
 				isPlaying = false;
 				
 			};
+
+			function youDiedMusicGas(){
+			isPlaying ? theEndD3.pause() : theEndD3.play();
+			};
+			
+			theEndD3.loop = false;
+			
+			theEndD3.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			theEndD3.onpause = function() {
+				isPlaying = false;
+				
+			};
 			
 			function mainMenuMusic(){
 			isPlaying ? backgroundMusic.pause() : backgroundMusic.play();
@@ -179,3 +196,18 @@
 			buttonDelete.onpause = function() {
 				isPlaying = false;
 			};			
+			
+			
+			function metalDoorCloseAndLock(){
+			isPlaying ? metalClose.pause() : metalClose.play();
+			};
+			
+			metalClose.loop = false;
+			
+			metalClose.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			metalClose.onpause = function() {
+				isPlaying = false;
+			};	

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+			<script>
+				var loadbackground = function () {
+					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
+				}
+
+				window.onload = loadbackground();
+			</script>
+
+<!-- This calls in the previousPage script for use in the navigation bar -->	
+<script type="text/javascript" src="Scripts/previousPage.js"></script>
+
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/toggleAudio.js"></script>
+
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/saveGame.js"></script>
+
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/gasStarts.js"></script>
+
+</head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<body>
+
+	<!-- This builds the navigation bar including the links/functions for each button -->		
+	<div class="navigation">
+		<li><a class="active" href="index.html">Main Menu</a></li>
+		<li><a class="active" href="Detour Options.html">Options</a></li>
+	<li><a class="active" onclick="previousPage()">Previous Page</a></li>
+	<li><a class="active" href="Detour Homepage.html">Inventory</a></li>
+	<li><a class="active" onclick="savedGame()">Save Game</a></li>
+		<div class="navigation_right">
+			<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+		</div>
+	</div>
+
+<br>
+
+<!-- This sources the initial door closed image and door open image (this is hidden, only used to create imagemap) for use in the door open/close functions -->	
+	<img id ="wrongCode" src="Images/D3/D3 Wrong Code.png" alt="Detour Story D3 Wrong Code.png" style="width:1280px;height:720px;" usemap="#stepBack" class="center">
+
+<map name="stepBack">
+	<area shape="rect" coords="318,597,959,640" title="stepBackFromKeypad" onclick="stepBackKeypad(); metalDoorCloseAndLock(); stepBackToRoom(); setTimeout(gasStarts1, 1500); setTimeout(gasStarts2, 2000); setTimeout(gasStarts3, 2500); setTimeout(gasStarts4, 3000); setTimeout(youDiedMusicGas, 4000); setTimeout(gasStarts5, 4000); setTimeout(hideExtraTextD2, 4000); setTimeout(youDied, 4000);"/>
+</map>
+		<br>
+		
+		<p id="p1">The code you entered was incorrect. </p>	
+		
+		<br>
+		
+
+<!-- This function steps back from the keypad and displays the full room once again -->	
+		<script>
+            var image =  document.getElementById("wrongCode");
+            function stepBackToRoom()
+            {
+                if (image.getAttribute('src') == "Images/D3/D3 Wrong Code.png")
+                {
+                   image.src = "Images/D3/D3 Door Shut.png";
+                }
+				
+                else
+                {
+                    image.src = "Images/D3/D3 Wrong Code.png";
+                }
+            }
+        
+	</script>
+
+<!-- This function reveals text after the car radio is pressed -->
+<script type="text/javascript" src="Scripts/showExtraText.js"></script>
+
+
+		<h1 id="startOver" class="decision"></h1>
+			<script type="text/javascript" src="Scripts/showDecisions.js"></script>
+</body>
+</html>
