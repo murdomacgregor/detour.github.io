@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+		
+<!-- This loads the currently selected CSS stylesheet (detourstyle.css by default) -->
 			<script>
 				var loadbackground = function () {
 					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
@@ -13,18 +15,21 @@
 <!-- This calls in the previousPage script for use in the navigation bar -->	
 <script type="text/javascript" src="Scripts/previousPage.js"></script>
 
-<!-- This function toggles the radio static .mp3 play/pause -->		
+<!-- This script handles all audio play/pause functions (aside from the main menu music which is handled below) -->		
 <script type="text/javascript" src="Scripts/toggleAudio.js"></script>
 
-<!-- This function saves the game -->		
+<!-- This script handles the save game function in the navigation bar -->		
 <script type="text/javascript" src="Scripts/saveGame.js"></script>
+
+<!-- This script handles the function that clears any saved game state and begins a fresh playthrough -->		
+<script type="text/javascript" src="Scripts/clearSaveData.js"></script>
 </head>
-	
+
+<!-- This builds the navigation bar -->
 <div class="navigation">
   <li><a class="active" href="index.html">Main Menu</a></li>
   <li><a class="active" href="Detour Options.html">Options</a></li>
   <li><a class="active" onclick="previousPage()">Previous Page</a></li>
-  <li><a class="active" href="Detour Homepage.html">Inventory</a></li>
   <li><a class="active" onclick="saveGame()">Save Game</a></li>
 	<div class="navigation_right">
 		<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
@@ -37,16 +42,17 @@
 
 <br> 
 
+<!-- This loads in the initial image of the current page for the game -->
 	<img id="detourHomepage" src="Images/Detour Homepage Muted.png" alt="Detour: A Choose Your Own Adventure Game by Murdo Macgregor" style="width:1280px;height:720px;" usemap="#homepage" class="center">
 
+<!-- This creates the image maps used for navigating the main menu controls -->
 		<map name="homepage">
 			<area shape="rect" coords="664, 395, 1177, 472" onclick="loadGame();"/>
-			<area shape="rect" coords="797, 497, 1177, 553" href="Detour BYP.html"/>
+			<area shape="rect" coords="797, 497, 1177, 553" onclick="clearSaveGame();"/>
 			<area shape="rect" coords="869, 574, 1177, 629" href="Detour Options.html"/>
 			<area shape="rect" coords="48, 548, 181, 662" onclick="mainMenuMute(); mainMenuMusic();"/>
 		</map>
 		
-
 <!-- This function plays/pauses the main menu background music -->	
         <script>
             var image =  document.getElementById("detourHomepage");
