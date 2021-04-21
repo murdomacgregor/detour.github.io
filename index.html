@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link id="pagestyle" rel="stylesheet" type="text/css" href="" />
-		
-<!-- This loads the currently selected CSS stylesheet (detourstyle.css by default) -->
+	<!-- This loads the currently selected CSS stylesheet (detourstyle.css by default) -->
 			<script>
 				var loadbackground = function () {
 					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
@@ -11,6 +9,8 @@
 
 				window.onload = loadbackground();
 			</script>
+			
+		<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" />
 			
 <!-- This calls in the previousPage script for use in the navigation bar -->	
 <script type="text/javascript" src="Scripts/previousPage.js"></script>
