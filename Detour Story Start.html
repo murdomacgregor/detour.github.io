@@ -13,10 +13,10 @@
 <!-- This calls in the previousPage script for use in the navigation bar -->	
 <script type="text/javascript" src="Scripts/previousPage.js"></script>
 
-<!-- This function toggles the radio static .mp3 play/pause -->		
+<!-- This script handles all audio play/pause functions (aside from the main menu music) -->	
 <script type="text/javascript" src="Scripts/toggleAudio.js"></script>
 
-<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<!-- This script handles the save game function in the navigation bar -->	
 <script type="text/javascript" src="Scripts/saveGame.js"></script>
 
 </head>
@@ -28,8 +28,7 @@
   <li><a class="active" href="index.html">Main Menu</a></li>
   <li><a class="active" href="Detour Options.html">Options</a></li>
   <li><a class="active" onclick="previousPage()">Previous Page</a></li>
-  <li><a class="active" href="Detour Homepage.html">Inventory</a></li>
-  <li><a class="active" onclick="savedGame()">Save Game</a></li>
+  <li><a class="active" onclick="saveGame()">Save Game</a></li>
 	<div class="navigation_right">
 		<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
 	</div>
@@ -104,15 +103,16 @@
 		
 		<p id="p1"> Driving this late and on so little sleep is probably dangerous. Maybe if you turn on the radio it will keep you awake. </p>		
 		
-<!-- This function reveals text after the car radio is pressed -->
+<!-- This script is used for functions to change the text when requested -->
 <script type="text/javascript" src="Scripts/showExtraText.js"></script>
 		
 		<br>
 
-<!-- This calls in the decisions script to use the functions when the player makes a decision/action -->		
+<!-- Specifies the decisions to use from the showDecisions.js script -->		
 <p id="pullover" class="decision"></p>
 <p id="keepdriving" class="decision"></p>
 
+<!-- This calls in the decisions script to use the functions when the player makes a decision/action -->	
 <script type="text/javascript" src="Scripts/showDecisions.js"></script>
 
 </body>
