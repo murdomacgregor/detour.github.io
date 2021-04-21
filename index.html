@@ -5,11 +5,6 @@
 		
 <!-- This loads the currently selected CSS stylesheet (detourstyle.css by default) -->
 			<script>
-				var swapStyleSheet = function (sheet) {
-					document.getElementById('pagestyle').setAttribute('href', sheet);
-					storebackground(sheet);
-				}
-				
 				var loadbackground = function () {
 					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
 				}
