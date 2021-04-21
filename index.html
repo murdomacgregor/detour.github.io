@@ -5,6 +5,15 @@
 		
 <!-- This loads the currently selected CSS stylesheet (detourstyle.css by default) -->
 			<script>
+				var swapStyleSheet = function (sheet) {
+					document.getElementById('pagestyle').setAttribute('href', sheet);
+					storebackground(sheet);
+				}
+
+				var storebackground = function (swapstylesheet) {
+					localStorage.setItem('sheet', swapstylesheet);
+				}
+
 				var loadbackground = function () {
 					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
 				}
