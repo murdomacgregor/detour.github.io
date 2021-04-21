@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+	<head>
+		<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+		
+			<!-- This loads the currently selected CSS stylesheet (detourstyle.css by default) -->
 			<script>
 				var loadbackground = function () {
 					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
@@ -10,27 +12,26 @@
 				window.onload = loadbackground();
 			</script>
 			
-<!-- This calls in the previousPage script for use in the navigation bar -->	
-<script type="text/javascript" src="Scripts/previousPage.js"></script>
+			<!-- This calls in the previousPage script for use in the navigation bar -->	
+			<script type="text/javascript" src="Scripts/previousPage.js"></script>
 
-<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
-<script type="text/javascript" src="Scripts/saveGame.js"></script>
+			<!-- This script handles the save game function in the navigation bar -->	
+			<script type="text/javascript" src="Scripts/saveGame.js"></script>
 			
-</head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body>
+	</head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<body>
 
-	
-<div class="navigation">
-  <li><a class="active" href="index.html">Main Menu</a></li>
-  <li><a class="active" href="Detour Options.html">Options</a></li>
-  <li><a class="active" onclick="previousPage()">Previous Page</a></li>
-  <li><a class="active" href="Detour Homepage.html">Inventory</a></li>
-  <li><a class="active" onclick="saveProgress.js">Save Game</a></li>
-	<div class="navigation_right">
-		<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
-	</div>
-</div>
+		<!-- This builds the navigation bar -->
+		<div class="navigation">
+			<li><a class="active" href="index.html">Main Menu</a></li>
+			<li><a class="active" href="Detour Options.html">Options</a></li>
+			<li><a class="active" onclick="previousPage()">Previous Page</a></li>
+			<li><a class="active" onclick="saveGame()">Save Game</a></li>
+				<div class="navigation_right">
+					<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+				</div>
+		</div>
 
 <br>
 
@@ -49,7 +50,7 @@ Prologue
  at least you can finally get some sleep when you make it home...
 </h2>
 
-	
+		<!-- This creates a button-styled link that navigates the user to the next page -->
 		<h1><a href="Detour Story Start.html">Continue</a></h1>
 
 

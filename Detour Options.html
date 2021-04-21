@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
-<script>
-    var swapStyleSheet = function (sheet) {
-        document.getElementById('pagestyle').setAttribute('href', sheet);
-        storebackground(sheet);
-    }
+	<head>
+		<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+		
+			<script>
+				var swapStyleSheet = function (sheet) {
+					document.getElementById('pagestyle').setAttribute('href', sheet);
+					storebackground(sheet);
+				}
 
-    var storebackground = function (swapstylesheet) {
-        localStorage.setItem("sheet", swapstylesheet);
-    }
+				var storebackground = function (swapstylesheet) {
+					localStorage.setItem("sheet", swapstylesheet);
+				}
 
-    var loadbackground = function () {
-        document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
-    }
+				var loadbackground = function () {
+					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
+				}
 
-    window.onload = loadbackground();
-</script>
-<!-- This calls in the previousPage script for use in the navigation bar -->	
-<script type="text/javascript" src="Scripts/previousPage.js"></script>
+				window.onload = loadbackground();
+			</script>
+			
+			<!-- This calls in the previousPage script for use in the navigation bar and return to game function -->	
+			<script type="text/javascript" src="Scripts/previousPage.js"></script>
 
-<!-- This calls in the previousPage script for use in the navigation bar -->	
-<script type="text/javascript" src="Scripts/saveGame.js"></script>
+			<!-- This script handles the save game function in the navigation bar -->		
+			<script type="text/javascript" src="Scripts/saveGame.js"></script>
 
-</head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
-	
-<div class="navigation">
-	<li><a class="active" href="index.html">Main Menu</a></li>
-	<li><a class="active" href="Detour Options.html">Options</a></li>
-	<li><a class="active" onclick="previousPage()">Previous Page</a></li>
-	<li><a class="active" href="Detour Homepage.html">Inventory</a></li>
-	<div class="navigation_right">
-		<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+
+	<!-- This builds the navigation bar -->
+	<div class="navigation">
+		<li><a class="active" href="index.html">Main Menu</a></li>
+		<li><a class="active" href="Detour Options.html">Options</a></li>
+		<li><a class="active" onclick="previousPage()">Previous Page</a></li>
+		<li><a class="active" href="Detour Homepage.html">Inventory</a></li>
+		<div class="navigation_right">
+			<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+		</div>
 	</div>
-</div>
 
 <br>
 
@@ -47,28 +51,31 @@ Options
 
 </h1>
 
-<h2> Colour styling: Use these buttons to customize the appearance of the game to better suit your requirements. </h2>
+<h2> Colour styling: Use these buttons to customize the appearance of the game to better suit your preferences. </h2>
 
-<div class="detourstyle_img">
-	<img id ="Detour Styling" src="Images/detourstyle_example.png" alt="detourstyle_example.png" style="width:200px;height:200px;" class="detourStyleButton">
-</div>
+	<div class="detourstyle_img">
+		<img id ="Detour Styling" src="Images/detourstyle_example.png" alt="detourstyle_example.png" style="width:200px;height:200px;" class="detourStyleButton">
+	</div>
 
-<div class="blackandwhite_img">
-	<img id ="Detour Styling" src="Images/blackandwhite_example.png" alt="blackandwhite_example.png" style="width:200px;height:200px;" class="blackAndWhiteStyleButton">
-</div>
+	<div class="blackandwhite_img">
+		<img id ="Detour Styling" src="Images/blackandwhite_example.png" alt="blackandwhite_example.png" style="width:200px;height:200px;" class="blackAndWhiteStyleButton">
+	</div>
 
 <br>
-
+	
+	<!-- This creates a link that chanegs the stylesheet to the blackandwhite colourway -->
 	<div class="blackAndWhiteStyleButton">
 		<h2 href="#" onclick="swapStyleSheet('blackandwhite.css')">Change style to Black and White</h2>
 	</div>
 
+	<!-- This creates a link that chanegs the stylesheet to the 'Detour' colourway -->
 	<div class="detourStyleButton">
 		<h2 href="#" onclick="swapStyleSheet('detourstyle.css')">Change style to Detour</h2>
 	</div>
 	
 <br>
 
+	<!-- This button returns the user to the page they were previously on -->
 	<div class="h3_button">
 		<h3 onclick="previousPage()" class="button">Return To Game</h3>
 	</div>

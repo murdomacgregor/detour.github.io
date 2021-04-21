@@ -13,10 +13,12 @@ img {
 
 .detourStyleButton {
 	float: left;
+	cursor: pointer;
 }
 
 .blackAndWhiteStyleButton {
 	float: right;
+	cursor: pointer;
 }
 
 .center {
