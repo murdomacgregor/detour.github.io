@@ -19,10 +19,13 @@
 <!-- This script handles the save game function in the navigation bar -->	
 <script type="text/javascript" src="Scripts/saveGame.js"></script>
 
+<!-- This script loads the function that hides text after the windshield note is pressed -->
+<script type="text/javascript" src="Scripts/showExtraText.js"></script>
+
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body onload="showDecisionB2();">
-
+<body>
+ 
 <!-- This builds the navigation bar including the links/functions for each button -->		
 <div class="navigation">
   <li><a class="active" href="index.html">Main Menu</a></li>
@@ -37,37 +40,56 @@
 <br>
 
 <!-- This sources the initial car image with both headlights and radio off for use in the following two button functions -->	
-<img id ="carOff" src="Images/B1/B1 headlightOffRadioOff.png" alt="car.png" style="width:1280px;height:720px;" usemap="#carcontrols" class="center">
+<img id ="carOff" src="Images/D4F/D4F headlightOffRadioOff.png" alt="car.png" style="width:1280px;height:720px;" usemap="#carcontrols" class="center">
 
 <!-- This creates the image maps used for both the car radio and car headlight buttons -->	
 <map name="carcontrols">
 <area shape="circle" coords="775, 452, 36" title="carRadioButton" onclick="pressRadioButton0(); toggleAudio1();"/>
 <area shape="circle" coords="568, 448, 32" title="carHeadlightButton" onclick="pressHeadlightButton0()"/>
+<area shape="poly" coords="726,399,726,349,730,293,808,300,809,330,809,364,806,403" title="windshieldNote" onclick="readNote(); hideExtraTextD4F(); setTimeout(D4FDeathFinal, 3000); setTimeout(youDiedMusic, 3000); setTimeout(youDied, 3000);"/>
 </map>
+
+<!-- This function "reads" the note on the windshield by changing the source image-->	
+        <script>
+            var image =  document.getElementById("parkedCar");
+            function readNote()
+            {
+                    image.src = "Images/D4F/D4F Note.png";
+			}
+        </script>	
+		
+<!-- This function "reads" the note on the windshield by changing the source image-->	
+        <script>
+            var image =  document.getElementById("parkedCar");
+            function D4FDeathFinal()
+            {
+                    image.src = "Images/D4F/D4F Death.png";
+			}
+        </script>	
 
 <!-- This function switches the radio image from on/off state when the car radio button is pressed -->	
         <script>
             var image =  document.getElementById("parkedCar");
             function pressRadioButton0()
             {
-                if (image.getAttribute('src') == "Images/B1/B1 headlightOffRadioOff.png")
+                if (image.getAttribute('src') == "Images/D4F/D4F headlightOffRadioOff.png")
                 {
-                    image.src = "Images/B1/B1 headlightOffRadioOn.png";
+                    image.src = "Images/D4F/D4F headlightOffRadioOn.png";
                 }
 				
-				else if (image.getAttribute('src') == "Images/B1/B1 headlightOnRadioOn.png")
+				else if (image.getAttribute('src') == "Images/D4F/D4F headlightOnRadioOn.png")
 				{
-					image.src = "Images/B1/B1 headlightOnRadioOff.png";
+					image.src = "Images/D4F/D4F headlightOnRadioOff.png";
 				}
 				
-				else if (image.getAttribute('src') == "Images/B1/B1 headlightOnRadioOff.png")
+				else if (image.getAttribute('src') == "Images/D4F/D4F headlightOnRadioOff.png")
 				{
-					image.src = "Images/B1/B1 headlightOnRadioOn.png";
+					image.src = "Images/D4F/D4F headlightOnRadioOn.png";
 				}
 				
                 else
                 {
-                    image.src = "Images/B1/B1 headlightOffRadioOff.png";
+                    image.src = "Images/D4F/D4F headlightOffRadioOff.png";
                 }
             }
         </script>	
@@ -77,37 +99,35 @@
             var image =  document.getElementById("carOff");
             function pressHeadlightButton0()
             {
-                if (image.getAttribute('src') == "Images/B1/B1 headlightOffRadioOff.png")
+                if (image.getAttribute('src') == "Images/D4F/D4F headlightOffRadioOff.png")
                 {
-                    image.src = "Images/B1/B1 headlightOnRadioOff.png";
+                    image.src = "Images/D4F/D4F headlightOnRadioOff.png";
                 }
 				
-				else if (image.getAttribute('src') == "Images/B1/B1 headlightOffRadioOn.png")
+				else if (image.getAttribute('src') == "Images/D4F/D4F headlightOffRadioOn.png")
 				{
-					image.src = "Images/B1/B1 headlightOnRadioOn.png";
+					image.src = "Images/D4F/D4F headlightOnRadioOn.png";
 				}
 				
-				else if (image.getAttribute('src') == "Images/B1/B1 headlightOnRadioOn.png")
+				else if (image.getAttribute('src') == "Images/D4F/D4F headlightOnRadioOn.png")
 				{
-					image.src = "Images/B1/B1 headlightOffRadioOn.png";
+					image.src = "Images/D4F/D4F headlightOffRadioOn.png";
 				}
 				
                 else
                 {
-                    image.src = "Images/B1/B1 headlightOffRadioOff.png";
+                    image.src = "Images/D4F/D4F headlightOffRadioOff.png";
                 }
             }
         </script>
 		
 		<br>
 		
-		<p id="p1"> You decide to try and make it home before you fall asleep. After continuing down the back road for a couple of minutes, you are met with a sign. This road shouldn't be shut, usually you would have heard about every blocked road. Strange... </p>		
+		<p id="p1"> Suddenly you wake up. Was someone outside the car that woke you up? What is that on the windshield? </p>		
 		
 		<br>
 
-<!-- Specifies the decisions to use from the showDecisions.js script -->		
-<p id="pulloverB2" class="decision"></p>
-
+<h1 id="startOver" class="decision"></h1>
 <!-- This calls in the decisions script to use the functions when the player makes a decision/action -->	
 <script type="text/javascript" src="Scripts/showDecisions.js"></script>
 

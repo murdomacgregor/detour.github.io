@@ -1,6 +1,6 @@
 			function showExtraText0() 
 			{
-				document.getElementById("p1").innerHTML = "Huh, guess there must be no signal out here. You could pull over and sleep in the car, although the drive isn't too long so you could just power through.";
+				document.getElementById("p1").innerHTML = "Huh, guess there must be no signal out here. You could pull over and sleep in the car, or you can try and make it home before you fall asleep";
 			}
 			
 			function showExtraText1() 
@@ -34,6 +34,11 @@
 			}
 			
 			function hideExtraTextD2() 
+			{
+				document.getElementById("p1").innerHTML = "";
+			}
+			
+			function hideExtraTextD4F() 
 			{
 				document.getElementById("p1").innerHTML = "";
 			}

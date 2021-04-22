@@ -12,6 +12,14 @@
 				document.getElementById("keepdriving").innerHTML = result;
 				document.getElementById("keepdriving").style.cssFloat = "right";
 			}
+			
+			function showDecisionB2() {
+				var decision = "Pull over";
+				var result = decision.link("Detour Story B2.html");
+				document.getElementById("pulloverB2").innerHTML = result;
+				document.getElementById("pulloverB2").style.margin ="0 auto";
+			}
+			
 
 			function showDecisionA2() {
 				var decision = "Leave the car and investigate";
@@ -20,9 +28,9 @@
 				document.getElementById("investigate").style.cssFloat = "left"
 			}
 			
-			function showDecisionC1() {
+			function showDecisionD4() {
 				var decision = "Stay in the car and go to sleep";
-				var result = decision.link("Detour Story C1.html");
+				var result = decision.link("Detour Story D4.html");
 				document.getElementById("sleepincar").innerHTML = result;
 				document.getElementById("sleepincar").style.cssFloat = "right"
 			}
@@ -160,5 +168,12 @@
 				var result = decision.link("Detour Story A13C.html");
 				document.getElementById("enterCrowTemple").innerHTML = result;
 				document.getElementById("enterCrowTemple").style.margin = "0 auto";
+			}
+			
+			function showDecisionEnterFishPond() {
+				var decision = "Step onto the platform";
+				var result = decision.link("Detour Story A13F.html");
+				document.getElementById("enterFishPond").innerHTML = result;
+				document.getElementById("enterFishPond").style.margin = "0 auto";
 			}
 			

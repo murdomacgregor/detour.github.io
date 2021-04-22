@@ -11,6 +11,7 @@
 			var buttonDelete = new Audio("Sounds/buttonDelete.mp3");
 			var buttonEnter = new Audio("Sounds/buttonEnter.mp3");
 			var metalClose = new Audio("Sounds/doorCloseAndLock F.mp3");
+			var waterSplash = new Audio("Sounds/waterSplash.mp3");
 			var isPlaying = false;
 		
 			function toggleAudio0(){
@@ -209,5 +210,19 @@
 			};
 	
 			metalClose.onpause = function() {
+				isPlaying = false;
+			};	
+			
+			function splash(){
+			isPlaying ? waterSplash.pause() : waterSplash.play();
+			};
+			
+			waterSplash.loop = false;
+			
+			waterSplash.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			waterSplash.onpause = function() {
 				isPlaying = false;
 			};	

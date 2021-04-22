@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+			<script>
+				var loadbackground = function () {
+					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
+				}
+
+				window.onload = loadbackground();
+			</script>
+
+<!-- This calls in the previousPage script for use in the navigation bar -->	
+<script type="text/javascript" src="Scripts/previousPage.js"></script>
+
+<!-- This script handles all audio play/pause functions (aside from the main menu music) -->	
+<script type="text/javascript" src="Scripts/toggleAudio.js"></script>
+
+<!-- This script handles the save game function in the navigation bar -->	
+<script type="text/javascript" src="Scripts/saveGame.js"></script>
+
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body onload="setTimeout(leafCrunches, 2000); setTimeout(D4FTransition, 4000)">
+ 
+<audio src="Sounds/leafCrunch.mp3" id="leaf_crunch"></audio>
+ 
+<script> 
+function leafCrunches() {
+	document.getElementById("leaf_crunch").play();
+}
+
+function D4FTransition() {
+	window.location.href = "Detour Story D4F.html";
+}
+</script>
+
+<!-- This builds the navigation bar including the links/functions for each button -->		
+<div class="navigation">
+  <li><a class="active" href="index.html">Main Menu</a></li>
+  <li><a class="active" href="Detour Options.html">Options</a></li>
+  <li><a class="active" onclick="previousPage()">Previous Page</a></li>
+  <li><a class="active" onclick="saveGame()">Save Game</a></li>
+	<div class="navigation_right">
+		<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+	</div>
+</div>
+
+<br>
+
+<!-- This sources the initial car image with both headlights and radio off for use in the following two button functions -->	
+<img id ="D4Message" src="Images/D4/D4 Message.png" alt="D4 Message.png" style="width:1280px;height:720px;" class="center">
+		
+</body>
+</html>

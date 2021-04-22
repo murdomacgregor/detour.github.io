@@ -21,8 +21,8 @@
 
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body onload="showDecisionB2();">
-
+<body onload="showDecisionA2(); showDecisionD4()">
+ 
 <!-- This builds the navigation bar including the links/functions for each button -->		
 <div class="navigation">
   <li><a class="active" href="index.html">Main Menu</a></li>
@@ -37,7 +37,7 @@
 <br>
 
 <!-- This sources the initial car image with both headlights and radio off for use in the following two button functions -->	
-<img id ="carOff" src="Images/B1/B1 headlightOffRadioOff.png" alt="car.png" style="width:1280px;height:720px;" usemap="#carcontrols" class="center">
+<img id ="carOff" src="Images/B2/B2 headlightOffRadioOff.png" alt="car.png" style="width:1280px;height:720px;" usemap="#carcontrols" class="center">
 
 <!-- This creates the image maps used for both the car radio and car headlight buttons -->	
 <map name="carcontrols">
@@ -50,24 +50,24 @@
             var image =  document.getElementById("parkedCar");
             function pressRadioButton0()
             {
-                if (image.getAttribute('src') == "Images/B1/B1 headlightOffRadioOff.png")
+                if (image.getAttribute('src') == "Images/B2/B2 headlightOffRadioOff.png")
                 {
-                    image.src = "Images/B1/B1 headlightOffRadioOn.png";
+                    image.src = "Images/B2/B2 headlightOffRadioOn.png";
                 }
 				
-				else if (image.getAttribute('src') == "Images/B1/B1 headlightOnRadioOn.png")
+				else if (image.getAttribute('src') == "Images/B2/B2 headlightOnRadioOn.png")
 				{
-					image.src = "Images/B1/B1 headlightOnRadioOff.png";
+					image.src = "Images/B2/B2 headlightOnRadioOff.png";
 				}
 				
-				else if (image.getAttribute('src') == "Images/B1/B1 headlightOnRadioOff.png")
+				else if (image.getAttribute('src') == "Images/B2/B2 headlightOnRadioOff.png")
 				{
-					image.src = "Images/B1/B1 headlightOnRadioOn.png";
+					image.src = "Images/B2/B2 headlightOnRadioOn.png";
 				}
 				
                 else
                 {
-                    image.src = "Images/B1/B1 headlightOffRadioOff.png";
+                    image.src = "Images/B2/B2 headlightOffRadioOff.png";
                 }
             }
         </script>	
@@ -77,36 +77,37 @@
             var image =  document.getElementById("carOff");
             function pressHeadlightButton0()
             {
-                if (image.getAttribute('src') == "Images/B1/B1 headlightOffRadioOff.png")
+                if (image.getAttribute('src') == "Images/B2/B2 headlightOffRadioOff.png")
                 {
-                    image.src = "Images/B1/B1 headlightOnRadioOff.png";
+                    image.src = "Images/B2/B2 headlightOnRadioOff.png";
                 }
 				
-				else if (image.getAttribute('src') == "Images/B1/B1 headlightOffRadioOn.png")
+				else if (image.getAttribute('src') == "Images/B2/B2 headlightOffRadioOn.png")
 				{
-					image.src = "Images/B1/B1 headlightOnRadioOn.png";
+					image.src = "Images/B2/B2 headlightOnRadioOn.png";
 				}
 				
-				else if (image.getAttribute('src') == "Images/B1/B1 headlightOnRadioOn.png")
+				else if (image.getAttribute('src') == "Images/B2/B2 headlightOnRadioOn.png")
 				{
-					image.src = "Images/B1/B1 headlightOffRadioOn.png";
+					image.src = "Images/B2/B2 headlightOffRadioOn.png";
 				}
 				
                 else
                 {
-                    image.src = "Images/B1/B1 headlightOffRadioOff.png";
+                    image.src = "Images/B2/B2 headlightOffRadioOff.png";
                 }
             }
         </script>
 		
 		<br>
 		
-		<p id="p1"> You decide to try and make it home before you fall asleep. After continuing down the back road for a couple of minutes, you are met with a sign. This road shouldn't be shut, usually you would have heard about every blocked road. Strange... </p>		
+		<p id="p1"> With no other roads home, your only option seems to be to find somewhere to sleep until you can find a way home in the morning. As you get ready to sleep, you notice what looks like a building deeper into the woods. </p>		
 		
 		<br>
 
 <!-- Specifies the decisions to use from the showDecisions.js script -->		
-<p id="pulloverB2" class="decision"></p>
+<p id="investigate" class="decision"></p>
+<p id="sleepincar" class="decision"></p>
 
 <!-- This calls in the decisions script to use the functions when the player makes a decision/action -->	
 <script type="text/javascript" src="Scripts/showDecisions.js"></script>

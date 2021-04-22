@@ -18,20 +18,20 @@
 
 <!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
 <script type="text/javascript" src="Scripts/saveGame.js"></script>
+
 </head>
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<body onload="showDecisionA7(); showDecisionA65(); showDecisionA9();">
+<body>
 
 	<!-- This builds the navigation bar including the links/functions for each button -->		
 	<div class="navigation">
 		<li><a class="active" href="index.html">Main Menu</a></li>
 		<li><a class="active" href="Detour Options.html">Options</a></li>
 	<li><a class="active" onclick="previousPage()">Previous Page</a></li>
-	<li><a class="active" href="Detour Homepage.html">Inventory</a></li>
 	<li><a class="active" onclick="saveGame()">Save Game</a></li>
 		<div class="navigation_right">
 			<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
@@ -41,20 +41,16 @@
 <br>
 
 <!-- This sources the initial door closed image and door open image (this is hidden, only used to create imagemap) for use in the door open/close functions -->	
-	<img id ="inspectBlood" src="Images/A5/A5 Inspect Blood.png" alt="Inspect Blood.png" style="width:1280px;height:720px;" usemap="#" class="center">
-			
+	<img id ="fishPond" src="Images/A13F/A13F.png" alt="A13F.png" style="width:1280px;height:720px;" usemap="#pondNote" class="center">
+	
+<map name="pondNote">
+	<area shape="poly" coords="632,393,635,352,639,318,657,309,676,316,678,337,678,380" title="postnote" onclick="youDied();"/>
+</map>
+
 		<br>
 		
-		<p id="p1"> It looks like a handprint, and the blood seems to trail off into the woods. Are those footprints too? Why do they go in different directions? Could this be something to do with that note? </p>	
-
+		<p id="p1"> You step onto the platform in the pond. There is a pillar with the same Fish symbol, and a note nailed to the front.  </p>	
+		
 		<br>
-
-<!-- This calls in the decisions script to use the functions when the player makes a decision/action -->		
-
-	<p id="followBloodTrail" class="decision"></p>
-	<p id="followFootsteps" class="decision"></p>
-	<p id="goBackToCarA65" class="decision"></p>
-
-		<script type="text/javascript" src="Scripts/showDecisions.js"></script>
 </body>
 </html>
