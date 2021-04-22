@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+			<script>
+				var loadbackground = function () {
+					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
+				}
+
+				window.onload = loadbackground();
+			</script>
+
+<!-- This calls in the previousPage script for use in the navigation bar -->	
+<script type="text/javascript" src="Scripts/previousPage.js"></script>
+
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/toggleAudio.js"></script>
+
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/saveGame.js"></script>
+
+</head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<body onload="setTimeout(arrowDeadSound, 4000); setTimeout(fireArrows, 5000); setTimeout(youDied, 5000)";>
+
+	<!-- This builds the navigation bar including the links/functions for each button -->		
+	<div class="navigation">
+		<li><a class="active" href="index.html">Main Menu</a></li>
+		<li><a class="active" href="Detour Options.html">Options</a></li>
+	<li><a class="active" onclick="previousPage()">Previous Page</a></li>
+	<li><a class="active" onclick="saveGame()">Save Game</a></li>
+		<div class="navigation_right">
+			<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+		</div>
+	</div>
+
+<br>
+
+<!-- This sources the initial door closed image and door open image (this is hidden, only used to create imagemap) for use in the door open/close functions -->	
+	<img id ="snakeNote" src="Images/A14S/A14S Note.png" alt="A14S Note.png" style="width:1280px;height:720px;" class="center">
+
+<audio src="Sounds/arrowDead.mp3" id="arrowDead"></audio>
+
+<!-- This function fires the arrows at the player -->	
+        <script>
+            var image =  document.getElementById("snakeNote");
+            function fireArrows()
+            {
+                if (image.getAttribute('src') == "Images/A14S/A14S Note.png")
+                {
+                   image.src = "Images/A14S/A14S Dead.png";
+                }
+				
+                else
+                {
+                    image.src = "Images/A14S/A14S Note.png";
+                }
+            }
+			
+			function arrowDeadSound() {
+				document.getElementById("arrowDead").play();
+
+				document.getElementById("p1").innerHTML = "Suddenly arrows fire from the pit walls surrounding you";
+			}
+
+        </script>
+		
+		<br>
+		
+		<p id="p1"> You read the note in the chest. </p>	
+		
+		<br>
+		
+<h1 id="startOver" class="decision"></h1>		
+<!-- This function reveals text after the car radio is pressed -->
+<script type="text/javascript" src="Scripts/showExtraText.js"></script>
+<!-- This calls in the decisions script to use the functions when the player makes a decision/action -->	
+<script type="text/javascript" src="Scripts/showDecisions.js"></script>
+
+</body>
+</html>

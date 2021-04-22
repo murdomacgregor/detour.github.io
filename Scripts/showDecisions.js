@@ -177,3 +177,38 @@
 				document.getElementById("enterFishPond").style.margin = "0 auto";
 			}
 			
+			function showDecisionEnterSnakePit() {
+				var decision = "Climb down into the pit";
+				var result = decision.link("Detour Story A13S.html");
+				document.getElementById("enterSnakePit").innerHTML = result;
+				document.getElementById("enterSnakePit").style.margin = "0 auto";
+			}
+			
+			function showDecisionReadSnakeNote() {
+				var decision = "Read the note";
+				var result = decision.link("Detour Story A14S.html");
+				document.getElementById("readSnakeNote").innerHTML = result;
+				document.getElementById("readSnakeNote").style.margin = "0 auto";
+			}
+			
+			function showEnterSecretDoor() {
+				var decision = "Go through the door";
+				var result = decision.link("Detour Story A16C.html");
+				document.getElementById("enterSecretDoor").innerHTML = result;
+				document.getElementById("enterSecretDoor").style.margin = "0 auto";
+			}
+			
+			function endGame() {
+				var decision = "To be continued...";
+				var result = decision.link("Detour Story End.html");
+				document.getElementById("end").innerHTML = result;
+				document.getElementById("end").style.margin = "0 auto";
+			}
+			
+			function startAgain() {
+				var decision = "Return to main menu";
+				var result = decision.link("index.html");
+				document.getElementById("startAgain").innerHTML = result;
+				document.getElementById("startAgain").style.margin = "0 auto";
+			}
+			

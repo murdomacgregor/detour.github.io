@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
+			<script>
+				var loadbackground = function () {
+					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
+				}
+
+				window.onload = loadbackground();
+			</script>
+
+<!-- This calls in the previousPage script for use in the navigation bar -->	
+<script type="text/javascript" src="Scripts/previousPage.js"></script>
+
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/toggleAudio.js"></script>
+
+<!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
+<script type="text/javascript" src="Scripts/saveGame.js"></script>
+
+</head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<body>
+
+	<!-- This builds the navigation bar including the links/functions for each button -->		
+	<div class="navigation">
+		<li><a class="active" href="index.html">Main Menu</a></li>
+		<li><a class="active" href="Detour Options.html">Options</a></li>
+	<li><a class="active" onclick="previousPage()">Previous Page</a></li>
+	<li><a class="active" href="Detour Homepage.html">Inventory</a></li>
+	<li><a class="active" onclick="saveGame()">Save Game</a></li>
+		<div class="navigation_right">
+			<li><a class="active" href="https://www.linkedin.com/in/murdo-macgregor-122473194/">By Murdo Macgregor | 40438627</a></li>
+		</div>
+	</div>
+
+<br>
+
+<!-- This sources the initial door closed image and door open image (this is hidden, only used to create imagemap) for use in the door open/close functions -->	
+	<img id ="correctCode" src="Images/A15C/A15C.png" alt="A15C.png" style="width:1280px;height:720px;" class="center">
+	
+
+		<br>
+		
+		<p id="p1"> You enter the code, and it seems to be correct. The door that was once blocked off has been opened.</p>	
+		
+		<br>
+
+		
+<!-- This function reveals text after the car radio is pressed -->
+<script type="text/javascript" src="Scripts/showExtraText.js"></script>
+
+<!-- This calls in the decisions script to use the functions when the player makes a decision/action -->	
+
+	<p id="enterSecretDoor" class="decision"></p>
+
+		<script type="text/javascript" src="Scripts/showDecisions.js"></script>
+</body>
+</html>

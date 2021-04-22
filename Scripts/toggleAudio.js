@@ -13,6 +13,8 @@
 			var metalClose = new Audio("Sounds/doorCloseAndLock F.mp3");
 			var waterSplash = new Audio("Sounds/waterSplash.mp3");
 			var openHatch = new Audio("Sounds/hatchOpen.mp3");
+			var openTheChest = new Audio("Sounds/chestOpen.mp3");
+			var arrowShot = new Audio("Sounds/arrowDead.mp3");
 			var isPlaying = false;
 		
 			function toggleAudio0(){
@@ -228,3 +230,33 @@
 				isPlaying = false;
 			
 			};	
+			
+			function openChest(){
+			isPlaying ? openTheChest.pause() : openTheChest.play();
+			};
+			
+			openTheChest.loop = false;
+			
+			openTheChest.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			openTheChest.onpause = function() {
+				isPlaying = false;
+			
+			};
+			
+			function snakeArrows(){
+			isPlaying ? arrowShot.pause() : arrowShot.play();
+			};
+			
+			arrowShot.loop = false;
+			
+			arrowShot.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			arrowShot.onpause = function() {
+				isPlaying = false;
+			
+			};
