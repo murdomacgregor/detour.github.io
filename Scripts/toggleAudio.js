@@ -12,6 +12,7 @@
 			var buttonEnter = new Audio("Sounds/buttonEnter.mp3");
 			var metalClose = new Audio("Sounds/doorCloseAndLock F.mp3");
 			var waterSplash = new Audio("Sounds/waterSplash.mp3");
+			var openHatch = new Audio("Sounds/hatchOpen.mp3");
 			var isPlaying = false;
 		
 			function toggleAudio0(){
@@ -225,4 +226,5 @@
 	
 			waterSplash.onpause = function() {
 				isPlaying = false;
+			
 			};	

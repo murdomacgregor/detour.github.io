@@ -19,6 +19,9 @@
 <!-- This function calls in the script to toggle the radio static .mp3 play/pause -->		
 <script type="text/javascript" src="Scripts/saveGame.js"></script>
 
+<!-- This function reveals text after the player drops into the water -->
+<script type="text/javascript" src="Scripts/showExtraText.js"></script>
+
 </head>
 
 
@@ -44,13 +47,67 @@
 	<img id ="fishPond" src="Images/A13F/A13F.png" alt="A13F.png" style="width:1280px;height:720px;" usemap="#pondNote" class="center">
 	
 <map name="pondNote">
-	<area shape="poly" coords="632,393,635,352,639,318,657,309,676,316,678,337,678,380" title="postnote" onclick="youDied();"/>
+	<area shape="poly" coords="632,393,635,352,639,318,657,309,676,316,678,337,678,380" title="postnote" onclick="waterNote(); grabWindshieldNote(); setTimeout(dropPond, 3000); setTimeout(splash, 3000); setTimeout(waterDrop, 4000); setTimeout(waterDead, 9000); setTimeout(youDied, 9000); setTimeout(hideExtraTextD2, 9000); "/>
 </map>
 
+<!-- This function drops the player into the water -->	
+        <script>
+            var image =  document.getElementById("fishPond");
+            function waterDrop()
+            {
+                if (image.getAttribute('src') == "Images/A13F/A13F Note.png")
+                {
+                   image.src = "Images/A13F/A13F Water.png";
+                }
+				
+                else
+                {
+                    image.src = "Images/A13F/A13F Note.png";
+                }
+            }
+        </script>
+		
+<!-- This function displays the you died image -->	
+        <script>
+            var image =  document.getElementById("fishPond");
+            function waterDead()
+            {
+                if (image.getAttribute('src') == "Images/A13F/A13F Water.png")
+                {
+                   image.src = "Images/A13F/A13F Dead.png";
+                }
+				
+                else
+                {
+                    image.src = "Images/A13F/A13F Water.png";
+                }
+            }
+        </script>
+
+<!-- This function reads the note on the pillar -->	
+        <script>
+            var image =  document.getElementById("fishPond");
+            function waterNote()
+            {
+                if (image.getAttribute('src') == "Images/A13F/A13F.png")
+                {
+                   image.src = "Images/A13F/A13F Note.png";
+                }
+				
+                else
+                {
+                    image.src = "Images/A13F/A13F.png";
+                }
+            }
+        </script>
 		<br>
 		
-		<p id="p1"> You step onto the platform in the pond. There is a pillar with the same Fish symbol, and a note nailed to the front.  </p>	
+		<p id="p1"> You step onto the platform in the pond. There is a pillar with the same Fish symbol as the path, and a note nailed to the front.  </p>	
 		
 		<br>
+		
+				
+		<h1 id="startOver" class="decision"></h1>
+			<script type="text/javascript" src="Scripts/showDecisions.js"></script>
 </body>
 </html>

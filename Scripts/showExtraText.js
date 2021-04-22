@@ -73,4 +73,9 @@
 				document.getElementById("p1").innerHTML = 'The door slams shut. Gas leaks in from the vent. A mysterious voice announces: "What a pity, I thought we finally found the one. You failed the H.U.N.T. Goodbye."';
 			}
 			
+			function dropPond() 
+			{
+				document.getElementById("p1").innerHTML = 'The ground beneath you releases, dropping you into the freezing water below.';
+			}
+			
 		
