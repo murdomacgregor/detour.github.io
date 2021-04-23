@@ -260,3 +260,18 @@
 				isPlaying = false;
 			
 			};
+			
+			function youDiedSkull(){
+			isPlaying ? theEndD3.pause() : theEndD3.play();
+			};
+			
+			theEndD3.loop = false;
+			
+			theEndD3.onplaying = function() {
+				isPlaying = true;
+			};
+	
+			theEndD3.onpause = function() {
+				isPlaying = false;
+			
+			};

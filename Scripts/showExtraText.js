@@ -79,4 +79,8 @@
 				document.getElementById("p1").innerHTML = 'The ground beneath you releases, dropping you into the freezing water below.';
 			}
 			
+			function skullText() 
+			{
+				document.getElementById("p1").innerHTML = 'You pickup the skull. It has a message written on the side in blood.';
+			}
 		
