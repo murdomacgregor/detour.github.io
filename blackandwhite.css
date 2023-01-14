@@ -8,7 +8,7 @@ body {
 }
 
 img {
-	border: 5px solid black;
+	border: 5px solid #000000;
 }
 
 .detourStyleButton {
@@ -28,20 +28,20 @@ img {
     width: 50%;
 }
 
-h1 {
-  color: white;
-  background-color: #161616;
+h1{
+  color: #ffffff;
+  background-color: #000000;
   font-family: LemonMilk, sans-serif;
   font-size: 600%;
   text-align: center;
   display: table;
-  margin: 50px auto 50px auto;
+  margin: 60px auto 60px auto;
 }
 
 
 h2 {
-  color: white;
-  background-color: #161616;
+  color: #ffffff;
+  background-color: #000000;
   font-family: LemonMilk, sans-serif;
   font-size: 200%;
   text-align: center;
@@ -50,8 +50,8 @@ h2 {
 }
 
 h3 {
-  color: white;
-  background-color: #161616;
+  color: #ffffff;
+  background-color: #000000;
   font-family: LemonMilk, sans-serif;
   font-size: 300%;
   text-align: center;
@@ -65,8 +65,8 @@ h3 {
 }
 
 p {
-  color: white;
-  background-color: #161616;
+  color: #ffffff;
+  background-color: #000000;
   font-family: LemonMilk, sans-serif;
   font-size: 200%;
   text-align: center;
@@ -81,8 +81,9 @@ a {
 	cursor: pointer;
 }
 
+
 .navigation {
-    background-color: #161616;
+	background-color: #000000;
 	font-family: LemonMilk, sans-serif;
 	overflow: hidden;
 	list-style:none;
@@ -93,17 +94,17 @@ a {
 }
 
 .navigation a {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 20px 20px;
-  text-decoration: none;
-  font-size: 20px;
+	float: left;
+	color: #ffffff;
+	text-align: center;
+	padding: 20px 20px;
+	text-decoration: none;
+	font-size: 20px;
 }
 
 .navigation a:hover {
-	background-color: white;
-	color: #161616;
+	background-color: #fffdfd;
+	color: #000000;
 }
 
 area
@@ -120,8 +121,8 @@ area
 }
 
 .decision {
-	background-color: black!important;
-	color: white!important;
+	background-color:#000000!important;
+	color: #ffffff!important;
 }
 
 .backToOuthouse {
