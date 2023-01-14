@@ -4,7 +4,7 @@
 <link id="pagestyle" rel="stylesheet" type="text/css" href="detourstyle.css" title="detourStyle" />
 			<script>
 				var loadbackground = function () {
-					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet'));
+					document.getElementById('pagestyle').setAttribute('href', localStorage.getItem('sheet')?localStorage.getItem("sheet"):"detourstyle.css");
 				}
 
 				window.onload = loadbackground();
